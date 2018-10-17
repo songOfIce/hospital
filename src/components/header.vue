@@ -20,7 +20,9 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+  name:"header-box"
+};
 </script>
 
 <style>

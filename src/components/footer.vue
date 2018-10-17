@@ -2,15 +2,15 @@
   <div class="footer">
     <hr>
      <div class="footer-nav">
-     <router-link to="">
+     <router-link to="/home/index">
        <i></i>
        <p>微医</p>
      </router-link>
-     <router-link to="">
+     <router-link to="/home">
        <i></i>
        <p>严选</p>
      </router-link>
-     <router-link to="">
+     <router-link to="/home/health">
        <i></i>
        <p>健康</p>
      </router-link>
@@ -28,6 +28,7 @@
 
 <script>
 export default {
+  name:"footer-box",
   data() {
     return {
       list: []

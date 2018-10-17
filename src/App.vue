@@ -12,22 +12,15 @@
 </template>
 
 <script>
-import footer from './components/footer.vue'
-import Header from './components/header.vue'
-export default{
-  components:{
-    "footer-box":footer,
-    "header-box":Header,
-  }
-  }
+export default {};
 </script>
 <style>
-  div.title h4{
-    text-align: center;
-    font-weight: lighter;
-    padding-top: 10px;
-  }
-  #app-container{
-    background: #FFFFFF;
-  }
+div.title h4 {
+  text-align: center;
+  font-weight: lighter;
+  padding-top: 10px;
+}
+#app-container {
+  background: #ffffff;
+}
 </style>

@@ -7,7 +7,9 @@ Vue.config.productionTip = false
 
 import './lib/mui/css/mui.css'
 import './lib/mui/css/icons-extra.css'
-import {Header,Swipe,SwipeItem,Button} from "mint-ui"
+import Footer from './components/footer.vue'
+import Header from './components/header.vue'
+Vue.component(Footer.name,Footer)
 Vue.component(Header.name,Header)
 
 
