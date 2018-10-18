@@ -14,11 +14,11 @@
        <i></i>
        <p>健康</p>
      </router-link>
-     <router-link to="">
+     <router-link to="/home/discover">
        <i></i>
        <p>发现</p>
      </router-link>
-     <router-link to="">
+     <router-link to="/home/myself">
        <i></i>
        <p>我</p>
      </router-link>

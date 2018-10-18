@@ -12,11 +12,6 @@
         签到
       </span>
     </router-link>
-  <!-- 挂号,医生 -->
-  <div>
-    
-  </div>
-
   </div>
 </template>
 <script>
@@ -37,6 +32,10 @@ div.header_search {
   font-size: 14px;
   justify-content: space-around;
 }
+
+div.header_search span.header_text {
+  color: #d8c29e;
+}
 div.header_search span.header_text{
   color: #D8C29E;
   font-size: 10px;
@@ -45,5 +44,32 @@ div.header_search span img {
   display: block;
   width: 25px;
   height: 17px;
+}
+
+div.home-main-entry--item {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+div.home-main-entry--item a{
+  width: 138px;
+  height: 155px;
+}
+div.home-main-entry--item a p.home-main-entry--item-p{
+  font-size: 20px;
+  color: black;
+  font-weight: 700;
+}
+div.home-main-entry--item a p.home-main-entry--item-description{
+  font-size: 11px;
+}
+div.home-main-entry--item a img{
+  width: 37px;
+  height: 37px;
+}
+
+div.home-internet-hospital-top-entry img{
+  width: 100%;
+  height:87px;
 }
 </style>

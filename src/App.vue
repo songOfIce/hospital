@@ -7,7 +7,8 @@
     <div>
       <header-box></header-box>
     </div>
-    <footer-box></footer-box>
+      <router-view></router-view>
+      <footer-box></footer-box>
   </div>
 </template>
 
