@@ -28,7 +28,7 @@ div.header{
   justify-content: space-around;
 }
 div.header_search input {
-  width: 350px;
+  width: 320px;
   height: 32px;
   border-radius: 30px;
   font-size: 14px;

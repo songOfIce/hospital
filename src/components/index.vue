@@ -51,7 +51,6 @@
           </router-link>
         </div>
       </div>
-      <hr>
       <!-- 微医全科-->
       <div class="home-internet-hospital--qk">
       <router-link to="">
@@ -60,140 +59,205 @@
       <hr>
       </div>
       <!-- 就诊动态 -->
-        <section class="hospital-dynamics">
+        <div class="hospital-dynamics">
           <div class="hospital-dynamics--header">
           <h3>就诊动态</h3>
-          <router-link to="">去看病</router-link>
+          <router-link to="">去看病 ></router-link>
           </div>
-        </section>
+        </div>
+      <!-- 动态轮播 -->
+      <!-- <mt-swipe :auto="4000" class="we-swipe--container">
+        <mt-swipe-item v-for="doc of doctor" :key="doc.index">
+          <p class="hospital-dynamics--item-title">
+            {{doc.title}}
+          </p>
+          <div class="hospital-dynamics--item-description">
+            <span>【专家义诊】</span>
+          </div> -->
+           <!-- <p class="hospital-dynamics--item-title">
+            {{doc.specialist}}
+          </p>
+          <div class="hospital-dynamics--item-description">
+            <span>【专家义诊】</span>
+          </div> -->
+        <!-- </mt-swipe-item>
+      </mt-swipe> -->
+      <mt-swipe :auto="4000">
+        <mt-swipe-item>
+          <img src="../../public/img/index/RJo49078410.jpg" alt="" class="swipe">
+        </mt-swipe-item>
+        <mt-swipe-item>
+          <img src="../../public/img/index/RJo49078410.jpg" alt="" class="swipe">
+        </mt-swipe-item>
+      </mt-swipe>
     </div>
   </div>
   </div>
 </template>
 <script>
 export default {
-  data(){
-    return{
-      msg:"Vue mock",
-      entry:[],
-      departments:[]
-    }
+  data() {
+    return {
+      msg: "Vue mock",
+      entry: [],
+      departments: [],
+      doctor:[],
+      swipe:[]
+    };
   },
-  created () {
-    this.getData()
+  created() {
+    this.getData();
   },
   methods: {
-    getData () {
-      this.$axios.get("http://localhost:8080/abc").then(data=>{
+    getData() {
+      this.$axios.get("http://localhost:8080/abc").then(data => {
         console.log(data);
         this.entry = data.data.entry;
         this.departments = data.data.departments;
-      })
+        this.doctor = data.data.doctor;
+        this.swipe = data.data.swipe;
+      });
     }
   }
-}
+};
 </script>
 
 <style>
-  *{
-      box-sizing: border-box;
-  }
-  div.home-internet-hospital-top,div.home-main-entry--item{
-      display: flex;
-      justify-content: center;
-  }
-  
-  div.home-internet-hospital-top-entry{
-      width: 90%;
-      height: 700px;
-      box-shadow:0px 0px 10px 10px #F6F6F7;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-  }
-  div.home-internet-hospital-top-entry a.top-entry img{
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-  }
-  section.home-internet-hospital-entries--item{
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      height: 150px;
-  }
-  section.home-internet-hospital-entries--item a{
-      display: block;
-      width: 40%;
-  }
-  section.home-internet-hospital-entries--item a img{
-    width: 27px;
-    height: 22px; 
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-  }
-  p{
-    margin: 0px !important;
-  }
-  /* 特色专科 */
-  div.departments--header{
-    display: flex;
-    justify-content: space-between;
-  }
-  div.departments--header h3{
-    font-weight:700px;
-    font-size: 20px;
-    margin-left: 13px;
-  }
-  div.departments--header a{
-    margin-top:5px;
-    margin-right: 13px;
-    color: #83889A;
-    font-size: 14px;
-  }
-  /* 特色专科--目录 */
-  div.departments--item{
-    display: flex;
-    justify-content: center;
-    width: 90%;
-  }
-  div.departments--content{
-    display: flex;
-    justify-content: center;
-  }
-  div.departments--item a.router-link-exact-active{
-    display: block;
-    width: 25%;
-  }
-  div.departments--item{
-    flex-wrap: wrap;
-  }
-  div.departments--item a.router-link-exact-active img{
-    position: relative;
-    width:35px;
-    height:35px;
-    left:10px;
-    top:5px;
-  }
-  div.departments--item a.router-link-exact-active p{
-    margin: 0px;
-    font-size: 10px;
-    color:#5F697A;
-  }
-  div.departments--item a.router-link-exact-active{
-    background: #F6F7F8;
-    border: 5px solid #FFFFFF;
-    border-radius: 10px;
-  }
-  /* 微医全科 */
-  div.home-internet-hospital--qk a img{
-    width: 90%;
-    height: 80px; 
-  }
-  div.home-internet-hospital--qk a{
-    display: flex;
-    justify-content: center;
-    border-radius: 10px;
-  }
-  hr{
-    width: 90%;
-  }
+* {
+  box-sizing: border-box;
+}
+div.home-internet-hospital-top,
+div.home-main-entry--item {
+  display: flex;
+  justify-content: center;
+}
+
+div.home-internet-hospital-top-entry {
+  width: 90%;
+  height: 900px;
+  box-shadow: 0px 0px 10px 10px #f6f6f7;
+  border-radius: 10px;
+}
+div.home-internet-hospital-top-entry a.top-entry img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+section.home-internet-hospital-entries--item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  height: 150px;
+}
+section.home-internet-hospital-entries--item a {
+  display: block;
+  width: 40%;
+}
+section.home-internet-hospital-entries--item a img {
+  width: 27px;
+  height: 22px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+}
+p {
+  margin: 0px !important;
+}
+/* 特色专科 */
+div.departments--header {
+  display: flex;
+  justify-content: space-between;
+}
+div.departments--header h3 {
+  font-weight: 700px;
+  font-size: 20px;
+  margin-left: 13px;
+}
+div.departments--header a {
+  margin-top: 5px;
+  margin-right: 13px;
+  color: #83889a;
+  font-size: 14px;
+}
+/* 特色专科--目录 */
+div.departments--item {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
+div.departments--content {
+  display: flex;
+  justify-content: center;
+}
+div.departments--item a.router-link-exact-active {
+  display: block;
+  width: 25%;
+}
+div.departments--item {
+  flex-wrap: wrap;
+}
+div.departments--item a.router-link-exact-active img {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  left: 10px;
+  top: 5px;
+}
+div.departments--item a.router-link-exact-active p {
+  margin: 0px;
+  font-size: 10px;
+  color: #5f697a;
+}
+div.departments--item a.router-link-exact-active {
+  background: #f6f7f8;
+  border: 5px solid #ffffff;
+  border-radius: 10px;
+}
+/* 微医全科 */
+div.home-internet-hospital--qk a img {
+  width: 330px;
+  height: 68px;
+}
+div.home-internet-hospital--qk a {
+  display: flex;
+  justify-content: center;
+  border-radius: 10px;
+}
+hr {
+  width: 90%;
+}
+/* 就诊动态 */
+div.hospital-dynamics div.hospital-dynamics--header {
+  display: flex;
+  justify-content: space-between;
+}
+div.hospital-dynamics--header h3 {
+  font-weight: 700px;
+  font-size: 20px;
+  margin-left: 13px;
+}
+div.hospital-dynamics--header a {
+  margin-top: 5px;
+  margin-right: 13px;
+  font-size: 14px;
+  color: #ffffff;
+  background: #3f86ff;
+  border-radius: 20px;
+  line-height: 25px;
+  width: 80px;
+  text-align: center;
+}
+/* 动态轮播 */
+div.hospital-dynamics--item-description {
+  color: #feb70f;
+}
+div.we-swipe-item {
+  margin-left: 13px;
+  margin-top: 13px;
+  font-size: 14px;
+}
+div.mint-swipe-items-wrap {
+  height: 100px;
+}
+img.swipe{
+  height: 100px;
+}
 </style>
