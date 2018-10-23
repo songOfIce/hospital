@@ -66,43 +66,53 @@
           </div>
         </div>
       <!-- 动态轮播 -->
-      <!-- <mt-swipe :auto="4000" class="we-swipe--container">
+      <mt-swipe :auto="4000" class="we-swipe--container" :show-indicators="false">
         <mt-swipe-item v-for="doc of doctor" :key="doc.index">
           <p class="hospital-dynamics--item-title">
             {{doc.title}}
           </p>
           <div class="hospital-dynamics--item-description">
             <span>【专家义诊】</span>
-          </div> -->
-           <!-- <p class="hospital-dynamics--item-title">
-            {{doc.specialist}}
+            <span>7分钟前</span>
+          </div>
+           <p class="hospital-dynamics--item-title">
+            {{doc.title}}
           </p>
           <div class="hospital-dynamics--item-description">
             <span>【专家义诊】</span>
-          </div> -->
-        <!-- </mt-swipe-item>
-      </mt-swipe> -->
-      <mt-swipe :auto="4000">
-        <mt-swipe-item>
-          <img src="../../public/img/index/RJo49078410.jpg" alt="" class="swipe">
+            <span>6分钟前</span>
+          </div>
         </mt-swipe-item>
-        <mt-swipe-item>
-          <img src="../../public/img/index/RJo49078410.jpg" alt="" class="swipe">
+      </mt-swipe>
+      </div>
+    </div> 
+    <!-- insurance -->
+    <div class="insurance-entry">
+      <router-link to="">
+        <img src="../../public/img/index/icon-health-insurance.ccf2db7f541b133af0462bbc2a0058cd.png" alt="">
+      </router-link>
+      <router-link to="">
+        <img src="../../public/img/index/icon-internet-hospital.6b445de78ce838fbfe63793e8a18c722.png" alt="">
+      </router-link>
+    </div>
+      <!-- 图片轮播 -->
+    <div class="home-internet-hospital-top-middle">
+      <mt-swipe :auto="4000" :show-indicators="false" class="swipe">
+        <mt-swipe-item v-for="sw of swipe" :key="sw.id">
+          <img :src="sw.img" alt="">
         </mt-swipe-item>
       </mt-swipe>
     </div>
-  </div>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      msg: "Vue mock",
       entry: [],
       departments: [],
-      doctor:[],
-      swipe:[]
+      doctor: [],
+      swipe: []
     };
   },
   created() {
@@ -134,8 +144,8 @@ div.home-main-entry--item {
 
 div.home-internet-hospital-top-entry {
   width: 90%;
-  height: 900px;
-  box-shadow: 0px 0px 10px 10px #f6f6f7;
+  height: 800px;
+  box-shadow: 0px 0px 20px 20px #f6f6f7;
   border-radius: 10px;
 }
 div.home-internet-hospital-top-entry a.top-entry img {
@@ -167,7 +177,7 @@ div.departments--header {
   justify-content: space-between;
 }
 div.departments--header h3 {
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 20px;
   margin-left: 13px;
 }
@@ -213,7 +223,7 @@ div.departments--item a.router-link-exact-active {
 }
 /* 微医全科 */
 div.home-internet-hospital--qk a img {
-  width: 330px;
+  width: 88%;
   height: 68px;
 }
 div.home-internet-hospital--qk a {
@@ -230,7 +240,7 @@ div.hospital-dynamics div.hospital-dynamics--header {
   justify-content: space-between;
 }
 div.hospital-dynamics--header h3 {
-  font-weight: 700px;
+  font-weight: 700;
   font-size: 20px;
   margin-left: 13px;
 }
@@ -247,17 +257,55 @@ div.hospital-dynamics--header a {
 }
 /* 动态轮播 */
 div.hospital-dynamics--item-description {
+  display: flex;
+  justify-content: space-between;
+}
+div.hospital-dynamics--item-description span:first-child {
   color: #feb70f;
-}
-div.we-swipe-item {
-  margin-left: 13px;
-  margin-top: 13px;
   font-size: 14px;
+  padding-left: 13px;
 }
-div.mint-swipe-items-wrap {
-  height: 100px;
+div.hospital-dynamics--item-description span:last-child {
+  font-size: 14px;
+  padding-right: 13px;
+  color: #bbbcc7;
 }
-img.swipe{
+p.hospital-dynamics--item-title {
+  padding-left: 13px;
+}
+div.we-swipe--container {
+  height: 120px;
+  margin-top:13px;
+}
+/* 图片轮播 */
+div.home-internet-hospital-top-middle{
+  height: 200px;
+  margin-top:10px;
+  width: 100%;
+  
+}
+div.home-internet-hospital-top-middle img{
+  width: 90%;
   height: 100px;
+  border-radius: 10px;
+}
+div.home-internet-hospital-top-middle .swipe{
+  text-align: center;
+}
+
+  /* insurance */
+div.insurance-entry{
+  width: 100%;
+  display: flex;
+  text-align: center;
+  margin-top:30px;
+  padding: 12px;
+}
+div.insurance-entry img{
+  width: 90%;
+  height: 90px;
+}
+div.insurance-entry a{
+  width: 50%;
 }
 </style>

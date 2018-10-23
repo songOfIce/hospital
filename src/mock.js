@@ -16,11 +16,30 @@ Mock.mock('http://localhost:8080/abc',{
   }],
   'doctor|10':[{
     'id|0-100':1,
-    'title':"@ctitle(10,10)",
+    'title':"@ctitle(20,20)",
     'specialist':"@ctitle(2,4)"
   }],
   'swipe|6':[{
     'id|0-100':1,
-    'img':"@image('570x110',#00eeb4)",
+    'img':"@image('570x110',#213547)",
+    'title':"@ctitle(2,4)",
+  }],
+  // 严选
+  'homeSwipe|4':[{
+    'id|0-100':1,
+    'img':"@image('370x150',#FFE2E3)",
+  }],
+  // 导航栏
+  'navigation|5':[{
+    'id|0-100':1,
+    'img':"@image('30x33',#FFE2E3)",
+    'title':"@ctitle(4,4)"
+  }],
+  //商品
+  'product|6':[{
+    'id|0-100':1,
+    'img':"@image('90x90',#F92672)",
+    'title':"@ctitle(14,14)",
+    'price|100-999':100
   }]
 });

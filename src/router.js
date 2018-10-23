@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import index from './components/index.vue'
-import home from './components/home.vue'
+import homes from './components/homes.vue'
 import health from './components/health.vue'
 import myself from './components/myself.vue'
 import discover from './components/discover.vue'
@@ -12,9 +12,8 @@ export default new Router({
   base: process.env.BASE_URL,
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: home
+      path:'/home/homes',
+      component: homes
     },
     {
       path:'/home/index',

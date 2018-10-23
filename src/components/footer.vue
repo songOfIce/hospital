@@ -6,7 +6,7 @@
        <i></i>
        <p>微医</p>
      </router-link>
-     <router-link to="/home">
+     <router-link to="/home/homes">
        <i></i>
        <p>严选</p>
      </router-link>
