@@ -41,5 +41,19 @@ Mock.mock('http://localhost:8080/abc',{
     'img':"@image('90x90',#F92672)",
     'title':"@ctitle(14,14)",
     'price|100-999':100
+  }],
+  'productOne|6':[{
+    'id|0-100':1,
+    'img1':"@image('50x50',#F75741)",
+    'img2':"@image('170x170',#F92672)",
+    'subtitle':"@ctitle(45,55)",
+    'name':"@ctitle(20,30)",
+    'price|100-999':100
+  }],
+  // 分类推荐
+  'wrapper|4':[{
+    'id|0-100':1,
+    'img':"@image('77x77',#F9273C)",
+    'title':"@ctitle(4,4)"
   }]
 });

@@ -66,7 +66,7 @@
           </div>
         </div>
       <!-- 动态轮播 -->
-      <mt-swipe :auto="4000" class="we-swipe--container" :show-indicators="false">
+      <mt-swipe :auto="3000" class="we-swipe--container" :show-indicators="false">
         <mt-swipe-item v-for="doc of doctor" :key="doc.index">
           <p class="hospital-dynamics--item-title">
             {{doc.title}}
