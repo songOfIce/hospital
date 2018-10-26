@@ -96,6 +96,7 @@
           </li>
         </ul>
       </div>
+    <div class="div-hr"></div>
       <!-- 精选推荐/我的关注 -->
       <div class="sns">
         <div class="sns-tabbar">
@@ -107,27 +108,105 @@
           <img src="../../public/img/health/gdT27810879.jpg" alt="">
           <div class="user-name">
             <router-link to="">王玉宁|主治医师</router-link>
+            <p>4小时前</p>
           </div>
-          <span>4小时前</span>
-          <div class="ask-entry">
+          <router-link class="ask-entry" to="">
             向TA提问
-          </div>
+          </router-link>
         </div>
         <div class="post-content-block">
           <router-link to="">
-            脚静脉曲张 站出来的慢性病
+            <span><img class="post-content-block-img" src="../../public/img/health/2018-10-26_204319.png" alt=""></span>脚静脉曲张 站出来的慢性病
           </router-link>
           <div class="post-content">
             脚静脉曲张也称下肢静脉曲张，是指下肢浅表静脉发生扩张、延长、弯曲成团状，此病多见于中年男性，或长时间站立、负重的工作者。脚静脉曲张是一个恶性循环，当静脉中一个瓣膜坏掉，没法阻止血液倒流，血液积压在静脉
           </div>
         </div>
+        <img src="../../public/img/health/gdT27810879.jpg" alt="" class="post-content-img">
+        <footer class="post-footer-block">
+          <div class="footer-link">
+            <i class="icon">#</i>
+            <router-link to="">
+              感冒
+            </router-link>
+          </div>
+          <div class="footer-msg">
+            <span>回复&nbsp;3&nbsp;</span>
+            <span>.&nbsp;点赞&nbsp;4</span>
+          </div>
+        </footer>
+        </div>
+        <div class="post">
+        <div class="post-header">
+          <img src="../../public/img/health/gdT27810879.jpg" alt="">
+          <div class="user-name">
+            <router-link to="">王玉宁|主治医师</router-link>
+            <p>4小时前</p>
+          </div>
+          <router-link class="ask-entry" to="">
+            向TA提问
+          </router-link>
+        </div>
+        <div class="post-content-block">
+          <router-link to="">
+            <span><img class="post-content-block-img" src="../../public/img/health/2018-10-26_204319.png" alt=""></span>脚静脉曲张 站出来的慢性病
+          </router-link>
+          <div class="post-content">
+            脚静脉曲张也称下肢静脉曲张，是指下肢浅表静脉发生扩张、延长、弯曲成团状，此病多见于中年男性，或长时间站立、负重的工作者。脚静脉曲张是一个恶性循环，当静脉中一个瓣膜坏掉，没法阻止血液倒流，血液积压在静脉
+          </div>
+        </div>
+        <img src="../../public/img/health/gdT27810879.jpg" alt="" class="post-content-img">
+        <footer class="post-footer-block">
+          <div class="footer-link">
+            <i class="icon">#</i>
+            <router-link to="">
+              感冒
+            </router-link>
+          </div>
+          <div class="footer-msg">
+            <span>回复&nbsp;3&nbsp;</span>
+            <span>.&nbsp;点赞&nbsp;4</span>
+          </div>
+        </footer>
+        </div>
+        <div class="div-hr"></div>
+        <div class="post">
+        <div class="post-header">
+          <img src="../../public/img/health/gdT27810879.jpg" alt="">
+          <div class="user-name">
+            <router-link to="">王玉宁|主治医师</router-link>
+            <p>4小时前</p>
+          </div>
+          <router-link class="ask-entry" to="">
+            向TA提问
+          </router-link>
+        </div>
+        <div class="post-content-block">
+          <router-link to="">
+            <span><img class="post-content-block-img" src="../../public/img/health/2018-10-26_204319.png" alt=""></span>脚静脉曲张 站出来的慢性病
+          </router-link>
+          <div class="post-content">
+            脚静脉曲张也称下肢静脉曲张，是指下肢浅表静脉发生扩张、延长、弯曲成团状，此病多见于中年男性，或长时间站立、负重的工作者。脚静脉曲张是一个恶性循环，当静脉中一个瓣膜坏掉，没法阻止血液倒流，血液积压在静脉
+          </div>
+        </div>
+        <img src="../../public/img/health/gdT27810879.jpg" alt="" class="post-content-img">
+        <footer class="post-footer-block">
+          <div class="footer-link">
+            <i class="icon">#</i>
+            <router-link to="">
+              感冒
+            </router-link>
+          </div>
+          <div class="footer-msg">
+            <span>回复&nbsp;3&nbsp;</span>
+            <span>.&nbsp;点赞&nbsp;4</span>
+          </div>
+        </footer>
         </div>
       </div>
     </div>
-    <div class="div-hr"></div>
   </div>
 </template>
-
 <script>
 export default {};
 </script>
@@ -211,11 +290,66 @@ div.div-hr {
 /* 精选推荐/我的关注 */
 div.sns-tabbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin-left: 20px;
   margin-right: 20px;
 }
 /* post-header */
-div.post-header {
+div.post-header div.user-name{
+  margin-left:-90px;
+}
+div.post-header div.user-name a{
+  color: #4F5264;
+}
+div.post-header a{
+  font-size: 14px;
+}
+div.sns{
+  width: 90%;
+  margin: 0 auto;
+}
+div.post-header img{
+  height: 36px;
+  width: 36px;
+}
+div.post-header{
+  display: flex;
+  justify-content: space-between;
+}
+a.ask-entry{
+  margin-top:10px;
+  font-size: 14px;
+  border: 1px solid #3F86FF;
+  border-radius: 20px;
+  height: 25px;
+  width: 70px;
+  line-height:25px;
+  text-align: center;
+}
+div.post div.post-content-block a{
+  font-size:16px;
+  font-weight:700;
+  color: #28354c;
+}
+div.post div.post-content-block  div.post-content{
+  font-size: 14px;
+  color: #4F5264;
+}
+img.post-content-block-img{
+  vertical-align: middle;
+  margin-right: 10px;
+}
+footer.post-footer-block{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #a6a8b6;
+}
+footer.post-footer-block a{
+  color: #2F4E98;
+}
+img.post-content-img{
+  height: 117px;
+  width: 208px;
 }
 </style>
