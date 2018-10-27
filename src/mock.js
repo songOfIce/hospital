@@ -55,5 +55,21 @@ Mock.mock('http://localhost:8080/abc',{
     'id|0-100':1,
     'img':"@image('77x77',#F9273C)",
     'title':"@ctitle(4,4)"
+  }],
+  // 精选推荐
+  'Selection|10':[{
+    'id|0-100':1,
+    'img1':"@image('36x36',#E6B93C)",
+    'username':"@ctitle(8,8)",
+    'img2':"@image('208x117',#E6B93C)",
+    'section':"@ctitle(90,90)",
+    'content':"@ctitle(12,12)"
+  }],
+  // discover
+  'discover|10':[{
+    'id|0-100':1,
+    'title':"@ctitle(12,12)",
+    'description':"@ctitle(16,16)",
+    'img':"@image('100x75',#D20A0A)"
   }]
 });

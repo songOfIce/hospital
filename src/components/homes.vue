@@ -110,7 +110,6 @@ export default {
   methods: {
     getdata() {
       this.$axios.get("http://localhost:8080/abc").then(data => {
-        console.log(data);
         this.homeSwipe = data.data.homeSwipe;
         this.navigation = data.data.navigation;
         this.product = data.data.product;
