@@ -3,6 +3,7 @@
   <div class="header">
     <div class="header_search">
       <div class="search">
+        <i></i>
         <input type="text" placeholder="搜索医院,医生,科室,疾病">
       </div>
       <router-link to="">
@@ -39,7 +40,21 @@ div.header_search {
   font-size: 14px;
   justify-content: space-around;
 }
-
+div.search{
+  position: relative;
+}
+div.search i{
+  background-image: url("../../public/img/index/search.png");
+  width: 16px;
+  height: 16px;
+  display: block;
+  position:absolute;
+  top:8px;
+  left:10px;
+}
+div.search input{
+  padding-left:30px;
+}
 div.header_search span.header_text {
   color: #d8c29e;
 }
@@ -52,7 +67,6 @@ div.header_search span img {
   width: 25px;
   height: 17px;
 }
-
 div.home-main-entry--item {
   display: flex;
   justify-content: space-between;

@@ -141,7 +141,9 @@ div.home-main-entry--item {
   display: flex;
   justify-content: center;
 }
-
+p.home-main-entry--item-description{
+  color: #83889A;
+}
 div.home-internet-hospital-top-entry {
   width: 90%;
   height: 800px;
@@ -161,7 +163,9 @@ section.home-internet-hospital-entries--item {
 section.home-internet-hospital-entries--item a {
   display: block;
   width: 40%;
+  color: #83889A;
 }
+
 section.home-internet-hospital-entries--item a img {
   width: 27px;
   height: 22px;
@@ -180,6 +184,10 @@ div.departments--header h3 {
   font-weight: 700;
   font-size: 20px;
   margin-left: 13px;
+  margin-top:0px;
+}
+div.departments--header{
+
 }
 div.departments--header a {
   margin-top: 5px;
@@ -243,6 +251,7 @@ div.hospital-dynamics--header h3 {
   font-weight: 700;
   font-size: 20px;
   margin-left: 13px;
+  margin-top:0px;
 }
 div.hospital-dynamics--header a {
   margin-top: 5px;
@@ -251,6 +260,7 @@ div.hospital-dynamics--header a {
   color: #ffffff;
   background: #3f86ff;
   border-radius: 20px;
+  height: 25px;
   line-height: 25px;
   width: 80px;
   text-align: center;

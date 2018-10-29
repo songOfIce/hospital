@@ -3,8 +3,9 @@ import Router from 'vue-router'
 import index from './components/index.vue'
 import homes from './components/homes.vue'
 import health from './components/health.vue'
-import myself from './components/myself.vue'
+import myselflogin from './components/myselflogin.vue'
 import discover from './components/discover.vue'
+import myselfregister from './components/myselfregister.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -24,8 +25,12 @@ export default new Router({
       component:health
     },
     {
-      path:'/home/myself',
-      component:myself
+      path:'/home/myselflogin',
+      component:myselflogin
+    },
+    {
+      path:'/home/myselfregister',
+      component:myselfregister
     },
     {
       path:'/home/discover',

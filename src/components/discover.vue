@@ -30,6 +30,7 @@
     </div>
     <div class="div-hr"></div>
     </div>
+    <!-- policy -->
   </div>
 </template>
 
@@ -53,7 +54,7 @@ export default {
 }
 </script>
 
-<style scopedSlots>
+<style scoped>
 div.tab-find{
   width: 90%;
   margin: 0 auto;
@@ -87,5 +88,4 @@ div.health-footer{
   margin-top:10px;
   margin-bottom: 10px;
 }
-
 </style>

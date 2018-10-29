@@ -6,7 +6,6 @@ import Axios from 'axios'
 import Mock from './mock'
 Vue.config.productionTip = false
 Vue.prototype.$axios = Axios;
-import './lib/mui/css/mui.css'
 import "mint-ui/lib/style.css"
 import Footer from './components/footer.vue'
 import Header from './components/header.vue'

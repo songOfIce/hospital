@@ -186,6 +186,7 @@ div.entry-card-item img {
 }
 div.entry-card-text h5 {
   margin-top: 20px;
+  margin-bottom: 0px;
   font-size: 18px;
   font-weight: 700;
   color: #28354c;
@@ -211,6 +212,12 @@ div.modules ul li img {
 div.modules ul li {
   width: 25%;
   margin-bottom: 10px;
+}
+h6{
+  margin: 0px;
+}
+div.post-h a{
+  color: #478BFF;
 }
 /* 身边好微医 */
 ul.text-list {
@@ -266,6 +273,7 @@ div.post-header img{
   height: 36px;
   width: 36px;
 }
+
 div.post-header{
   display: flex;
   justify-content: space-between;

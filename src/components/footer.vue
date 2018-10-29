@@ -18,7 +18,7 @@
        <i></i>
        <p>发现</p>
      </router-link>
-     <router-link to="/home/myself">
+     <router-link to="/home/myselflogin">
        <i></i>
        <p>我</p>
      </router-link>
@@ -42,6 +42,9 @@ div.footer {
   bottom: 0;
   position: fixed;
   width: 100%;
+}
+div.footer a{
+  color:#5f697a;
 }
 div.footer-nav a:first-child i{
   display: block;
