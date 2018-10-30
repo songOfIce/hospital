@@ -292,7 +292,6 @@ div.home-internet-hospital-top-middle{
   height: 200px;
   margin-top:10px;
   width: 100%;
-  
 }
 div.home-internet-hospital-top-middle img{
   width: 90%;
@@ -302,7 +301,6 @@ div.home-internet-hospital-top-middle img{
 div.home-internet-hospital-top-middle .swipe{
   text-align: center;
 }
-
   /* insurance */
 div.insurance-entry{
   width: 100%;

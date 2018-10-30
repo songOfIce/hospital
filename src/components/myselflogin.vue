@@ -78,6 +78,7 @@ div.inner h1{
   font-size: 18px;
   text-align: center;
   color: #28354C;
+  font-weight: 400;
 }
 div.extra-info{
   text-align: center;

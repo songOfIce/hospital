@@ -6,6 +6,7 @@ import health from './components/health.vue'
 import myselflogin from './components/myselflogin.vue'
 import discover from './components/discover.vue'
 import myselfregister from './components/myselfregister.vue'
+import details from './components/details.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -35,6 +36,10 @@ export default new Router({
     {
       path:'/home/discover',
       component:discover
+    },
+    {
+      path:'/home/details',
+      component:details
     }
   ]
 })

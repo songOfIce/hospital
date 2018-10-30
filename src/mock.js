@@ -71,5 +71,10 @@ Mock.mock('http://localhost:8080/abc',{
     'title':"@ctitle(12,12)",
     'description':"@ctitle(16,16)",
     'img':"@image('100x75',#D20A0A)"
+  }],
+  //details
+  'details|1':[{
+    'id|100-200':1,
+    'img':"@image('414x414',#D20A0A)",
   }]
 });
