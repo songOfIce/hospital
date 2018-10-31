@@ -21,8 +21,7 @@ Mock.mock('http://localhost:8080/abc',{
   }],
   'swipe|6':[{
     'id|0-100':1,
-    'img':"@image('570x110',#213547)",
-    'title':"@ctitle(2,4)",
+    'img':"@image('570x110',#213547)"
   }],
   // 严选
   'homeSwipe|4':[{
@@ -44,7 +43,6 @@ Mock.mock('http://localhost:8080/abc',{
   }],
   'productOne|6':[{
     'id|0-100':1,
-    'img1':"@image('50x50',#F75741)",
     'img2':"@image('170x170',#F92672)",
     'subtitle':"@ctitle(45,55)",
     'name':"@ctitle(20,30)",
@@ -61,9 +59,13 @@ Mock.mock('http://localhost:8080/abc',{
     'id|0-100':1,
     'img1':"@image('36x36',#E6B93C)",
     'username':"@ctitle(8,8)",
+    'titletext':"@ctitle(11,11)",
     'img2':"@image('208x117',#E6B93C)",
+    'content':"@ctitle(12,12)",
     'section':"@ctitle(90,90)",
-    'content':"@ctitle(12,12)"
+    'cicle':"@ctitle(3,3)",
+    'msgreply|0-9':1,
+    'msglike|0-10':1
   }],
   // discover
   'discover|10':[{

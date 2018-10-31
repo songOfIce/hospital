@@ -109,7 +109,7 @@
           <img :src="item.img1" alt="">
           <div class="user-name">
             <router-link to="">{{item.username}}</router-link>
-            <p>{{item.username}}</p>
+            <p>{{item.titletext}}</p>
           </div>
           <router-link class="ask-entry" to="">
             向TA提问
@@ -128,12 +128,12 @@
           <div class="footer-link">
             <i class="icon">#</i>
             <router-link to="">
-              感冒
+              {{item.cicle}}
             </router-link>
           </div>
           <div class="footer-msg">
-            <span>回复&nbsp;3&nbsp;</span>
-            <span>.&nbsp;点赞&nbsp;4</span>
+            <span>回复&nbsp;{{item.msgreply}}&nbsp;</span>
+            <span>.&nbsp;点赞&nbsp;{{item.msglike}}</span>
           </div>
         </footer>
         </div>
@@ -256,7 +256,7 @@ div.sns-tabbar {
 }
 /* post-header */
 div.post-header div.user-name{
-  margin-left:-90px;
+  margin-left:-50px;
 }
 div.post-header div.user-name a{
   color: #4F5264;
