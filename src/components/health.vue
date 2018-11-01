@@ -34,32 +34,32 @@
             <router-link to=""><h6>就医互助</h6></router-link>
           </li>
            <li class="modules-list">
-            <img src="../../public/img/health/module-type1.png" alt="">
-            <router-link to=""><h6>就医互助</h6></router-link>
+            <img src="../../public/img/health/module-type2.png" alt="">
+            <router-link to=""><h6>女性健康</h6></router-link>
           </li>
            <li class="modules-list">
-            <img src="../../public/img/health/module-type1.png" alt="">
-            <router-link to=""><h6>就医互助</h6></router-link>
+            <img src="../../public/img/health/2018-11-01_202043.png" alt="">
+            <router-link to=""><h6>亲子育儿</h6></router-link>
           </li>
            <li class="modules-list">
-            <img src="../../public/img/health/module-type1.png" alt="">
-            <router-link to=""><h6>就医互助</h6></router-link>
+            <img src="../../public/img/health/module-type4.png" alt="">
+            <router-link to=""><h6>慢病调理</h6></router-link>
           </li>
            <li class="modules-list">
-            <img src="../../public/img/health/module-type1.png" alt="">
-            <router-link to=""><h6>就医互助</h6></router-link>
+            <img src="../../public/img/health/2018-11-01_202126.png" alt="">
+            <router-link to=""><h6>皮肤疾病</h6></router-link>
           </li>
            <li class="modules-list">
-            <img src="../../public/img/health/module-type1.png" alt="">
-            <router-link to=""><h6>就医互助</h6></router-link>
+            <img src="../../public/img/health/module-type6.png" alt="">
+            <router-link to=""><h6>肿瘤癌症</h6></router-link>
           </li>
            <li class="modules-list">
-            <img src="../../public/img/health/module-type1.png" alt="">
-            <router-link to=""><h6>就医互助</h6></router-link>
+            <img src="../../public/img/health/module-type7.png" alt="">
+            <router-link to=""><h6>生活情感</h6></router-link>
           </li>
            <li class="modules-list">
-            <img src="../../public/img/health/module-type1.png" alt="">
-            <router-link to=""><h6>就医互助</h6></router-link>
+            <img src="../../public/img/health/module-type8.png" alt="">
+            <router-link to=""><h6>两性之间</h6></router-link>
           </li>
         </ul>
       </div>
@@ -76,21 +76,21 @@
            <li class="text-item">
             <router-link to="">
               <i>#</i>
-              <h6>身边好微医</h6>
+              <h6>癌症早期症状...</h6>
               <span><img src="../../public/img/health/hot.png" alt=""></span>
             </router-link>
           </li>
            <li class="text-item">
             <router-link to="">
               <i>#</i>
-              <h6>身边好微医</h6>
+              <h6>测iphone X...</h6>
               <span><img src="../../public/img/health/hot.png" alt=""></span>
             </router-link>
           </li>
            <li class="text-item">
             <router-link to="">
               <i>#</i>
-              <h6>身边好微医</h6>
+              <h6>更多话题/活动</h6>
               <span><img src="../../public/img/health/hot.png" alt=""></span>
             </router-link>
           </li>
@@ -156,8 +156,8 @@ export default {
   },
   methods:{
     getsection() {
-      this.$axios.get("http://localhost:8080/abc").then(data=>{
-        this.Selection = data.data.Selection;
+      this.$axios.get("http://localhost:5050/selection").then(data=>{
+        this.Selection = data.data;
       })
     }
   }
@@ -167,7 +167,7 @@ export default {
 <style>
 div.entry-card {
   border: 1px solid #ffffff;
-  box-shadow: 0px 0px 20px 30px #f6f6f7;
+  box-shadow: 0px 0px 20px 10px #f6f6f7;
   border-radius: 10px;
   width: 90%;
   margin: 0 auto;
@@ -256,9 +256,7 @@ div.sns-tabbar {
 }
 /* post-header */
 div.post-header div.user-name{
-  margin-left:-50px;
-}
-div.post-header div.user-name a{
+  margin-left:-30px;
   color: #4F5264;
 }
 div.post-header a{

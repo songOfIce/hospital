@@ -14,11 +14,13 @@ Mock.mock('http://localhost:8080/abc',{
     'title':'@ctitle(2,10)',
     'doctor':'@ctitle(2,10)'
   }],
+  //doctor回复
   'doctor|10':[{
     'id|0-100':1,
     'title':"@ctitle(20,20)",
     'specialist':"@ctitle(2,4)"
   }],
+  //轮播图
   'swipe|6':[{
     'id|0-100':1,
     'img':"@image('570x110',#213547)"
@@ -41,6 +43,7 @@ Mock.mock('http://localhost:8080/abc',{
     'title':"@ctitle(14,14)",
     'price|100-999':100
   }],
+  //商品one
   'productOne|6':[{
     'id|0-100':1,
     'img2':"@image('170x170',#F92672)",
@@ -72,7 +75,8 @@ Mock.mock('http://localhost:8080/abc',{
     'id|0-100':1,
     'title':"@ctitle(12,12)",
     'description':"@ctitle(16,16)",
-    'img':"@image('100x75',#D20A0A)"
+    'img':"@image('100x75',#D20A0A)",
+    'titleconsult':"@ctitle(4,4)"
   }],
   //details
   'details|1':[{

@@ -28,12 +28,14 @@
       </div>
   </div>
   <!-- 导航栏 -->
+  <div class="div-hr"></div>
   <div class="home-category-main">
     <router-link to="" v-for="nav of navigation" :key="nav.index">
       <img :src="nav.img" alt="">
       <p>{{nav.title}}</p>
     </router-link>
   </div>
+  <div class="div-hr"></div>
   <!-- 火爆拼团 -->
   <div class="home-product">
     <router-link to="">
@@ -67,7 +69,6 @@
     <ul>
       <li v-for="item of productOne" :key="item.index">
         <router-link to="">
-        <img :src="item.img1" alt="" class="goods-grid-img1">
         <img :src="item.img2" alt="" class="goods-grid-img2">
         <p class="goods-subtitle">{{item.subtitle}}</p>
        <h3 class="goods-name">{{item.name}}</h3>
@@ -109,13 +110,21 @@ export default {
   },
   methods: {
     getdata() {
-      this.$axios.get("http://localhost:8080/abc").then(data => {
-        this.homeSwipe = data.data.homeSwipe;
-        this.navigation = data.data.navigation;
-        this.product = data.data.product;
-        this.productOne = data.data.productOne;
-        this.wrapper = data.data.wrapper;
-      })
+      this.$axios.get("http://localhost:5050/homeSwipe").then(data => {
+        this.homeSwipe = data.data;
+      });
+       this.$axios.get("http://localhost:5050/navigation").then(data => {
+        this.navigation = data.data;
+      });
+      this.$axios.get("http://localhost:5050/product").then(data => {
+        this.product = data.data;
+      });
+      this.$axios.get("http://localhost:5050/productOne").then(data => {
+        this.productOne = data.data;
+      });
+      this.$axios.get("http://localhost:5050/wrapper").then(data => {
+        this.wrapper = data.data;
+      });
     }
   }
 }
@@ -129,6 +138,10 @@ export default {
    height: 150px;
    width: 100%;
    text-align: center;
+ }
+ div.homes-header-swipe img{
+   width: 370px;
+   height: 150px;
  }
  /* wapper */
  div.homes-header-wapper{
@@ -152,6 +165,11 @@ export default {
    color: black;
    text-align: center;
    margin-top:20px;
+   margin-bottom: 20px;
+ }
+ div.home-category-main a img{
+   width: 33px;
+   height: 36px;
  }
  div.home-category-main img:last-child{
    position: relative;
@@ -164,6 +182,9 @@ export default {
    font-size: 12px;
  }
  /* 火爆拼团 */
+ div.home-product{
+   margin-top:20px;
+ }
  div.home-product a{
    display:flex;
    justify-content: space-between;

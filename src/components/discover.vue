@@ -12,7 +12,7 @@
     <div class="div-hr"></div>
     <div class="body" v-for="item of discover" :key="item.index">
       <section class="left-right-layout">
-        <div>
+        <div class="left-title">
           <p class="title">
             {{item.title}}
           </p>
@@ -21,11 +21,10 @@
         <div class="right-right-img">
           <img :src="item.img" alt="">
         </div>
-      </section>
-    
+      </section>  
     <!-- 健康资讯 -->
     <div class="health-footer">
-      <span>健康资讯</span>
+      <span>{{item.titleconsult}}</span>
       <div class="health-footer-list">...</div>
     </div>
     <div class="div-hr"></div>
@@ -46,8 +45,8 @@ export default {
   },
   methods:{
     getHealth(){
-      this.$axios.get("http://localhost:8080/abc").then(data=>{
-        this.discover = data.data.discover;
+      this.$axios.get("http://localhost:5050/discover").then(data=>{
+        this.discover = data.data;
       })
     }
   }
@@ -87,5 +86,24 @@ div.health-footer{
   margin: 0 auto;
   margin-top:10px;
   margin-bottom: 10px;
+}
+div.health-footer{
+  font-size: 14px;
+}
+div.left-title{
+  width: 60%;
+}
+p.title{ 
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-weight: 900;
+}
+p.description{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 14px;
 }
 </style>

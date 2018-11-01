@@ -32,7 +32,7 @@
             <span class="home-internet-hospital-entries--item-title">{{tmp.title}}</span>
           </p>
           <p>
-            <span>{{tmp.description}}</span>
+            <span class="home-description">{{tmp.description}}</span>
           </p>
         </router-link>
       </section>
@@ -69,14 +69,14 @@
       <mt-swipe :auto="3000" class="we-swipe--container" :show-indicators="false">
         <mt-swipe-item v-for="doc of doctor" :key="doc.index">
           <p class="hospital-dynamics--item-title">
-            {{doc.title}}
+            {{doc.title1}}
           </p>
           <div class="hospital-dynamics--item-description">
             <span>【专家义诊】</span>
             <span>7分钟前</span>
           </div>
            <p class="hospital-dynamics--item-title">
-            {{doc.title}}
+            {{doc.title2}}
           </p>
           <div class="hospital-dynamics--item-description">
             <span>【专家义诊】</span>
@@ -120,12 +120,18 @@ export default {
   },
   methods: {
     getData() {
-      this.$axios.get("http://localhost:8080/abc").then(data => {
+      this.$axios.get("http://localhost:5050/entry").then(data => {
         console.log(data);
-        this.entry = data.data.entry;
-        this.departments = data.data.departments;
-        this.doctor = data.data.doctor;
-        this.swipe = data.data.swipe;
+        this.entry = data.data;
+      });
+      this.$axios.get("http://localhost:5050/departments").then(data=>{
+        this.departments = data.data;
+      });
+      this.$axios.get("http://localhost:5050/doctor").then(data=>{
+        this.doctor = data.data;
+      });
+      this.$axios.get("http://localhost:5050/swipe").then(data=>{
+        this.swipe = data.data;
       });
     }
   }
@@ -146,7 +152,7 @@ p.home-main-entry--item-description{
 }
 div.home-internet-hospital-top-entry {
   width: 90%;
-  height: 800px;
+  height: 750px;
   box-shadow: 0px 0px 20px 20px #f6f6f7;
   border-radius: 10px;
 }
@@ -159,6 +165,16 @@ section.home-internet-hospital-entries--item {
   flex-wrap: wrap;
   justify-content: space-around;
   height: 150px;
+}
+span.home-description{
+  font-size: 12px;
+}
+a.entries--item img{
+  vertical-align: middle;
+}
+span.home-internet-hospital-entries--item-title{
+  color: #28354c;
+  font-weight: 700;
 }
 section.home-internet-hospital-entries--item a {
   display: block;
@@ -228,6 +244,9 @@ div.departments--item a.router-link-exact-active {
   background: #f6f7f8;
   border: 5px solid #ffffff;
   border-radius: 10px;
+}
+p.hospital-dynamics--item-title{
+  font-size: 10px;
 }
 /* 微医全科 */
 div.home-internet-hospital--qk a img {
