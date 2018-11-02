@@ -1,5 +1,6 @@
 <template>
   <div class="homes-section">
+    <header-box></header-box>
     <!-- 轮播图 -->
     <mt-swipe :auto="3000" class="homes-header-swipe">
       <mt-swipe-item v-for="hs of homeSwipe" :key="hs.index">
@@ -92,10 +93,17 @@
   </router-link>
   </div>
   </div>
+  <footer-box></footer-box>
   </div>
 </template>
 <script>
+import Footer from './footer.vue';
+import Header from './header.vue';
 export default {
+  components:{
+    FooterBox:Footer,
+    HeaderBox:Header
+  },
   data(){
     return {
       homeSwipe:[],
@@ -149,6 +157,8 @@ export default {
    justify-content: space-around;
    color: #C6933B;
    font-size: 14px;
+   margin-top:10px;
+   margin-bottom: 10px;
  }
  div.homes-header-wapper img{
    height: 13px;
@@ -263,6 +273,9 @@ div.goods-grid-item img.goods-grid-img2{
   width: 162px;
   height: 151px;
 }
+div.block-title-top{
+  color:#83889A;
+}
 div.goods-grid-item p.goods-subtitle,h3.goods-name{
   overflow: hidden;
   white-space: nowrap;
@@ -299,7 +312,6 @@ div.block-title-top{
   width: 90%;
   margin: 0 auto;
 }
-
 div.wrapper{
   display: flex;
   justify-content: space-between;
@@ -307,6 +319,12 @@ div.wrapper{
   margin:0 auto;
   height: 200px;
   text-align: center;
+}
+p.category-name{
+  font-size: 14px;
+}
+div.block-title-top{
+  font-size: 14px;
 }
 div.category-wrapper img{
   height: 77px;

@@ -30,11 +30,15 @@
     <div class="div-hr"></div>
     </div>
     <!-- policy -->
+    <footer-box></footer-box>
   </div>
 </template>
-
 <script>
+import Footer from './footer.vue';
 export default {
+components:{
+  FooterBox:Footer
+},
   data(){
     return {
       discover:[]
@@ -62,6 +66,7 @@ div.tab-find ul{
   display: flex;
   justify-content: space-around;
   list-style: none;
+  padding: 0px;
 }
 div.tab-find ul{
   margin: 0px;

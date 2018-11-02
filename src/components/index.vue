@@ -1,5 +1,6 @@
 <template>
   <div>
+    <header-box></header-box>
     <!-- 挂号,医生 -->
  <div class="home-main-entry--item">
     <router-link to="" class="entry-item-img">
@@ -72,8 +73,8 @@
             {{doc.title1}}
           </p>
           <div class="hospital-dynamics--item-description">
-            <span>【专家义诊】</span>
-            <span>7分钟前</span>
+            <span>{{doc.spcialist}}</span>
+            <span>{{doc.doctortime}}</span>
           </div>
            <p class="hospital-dynamics--item-title">
             {{doc.title2}}
@@ -103,10 +104,17 @@
         </mt-swipe-item>
       </mt-swipe>
     </div>
+    <footer-box></footer-box>
   </div>
 </template>
 <script>
+import Footer from './footer.vue';
+import Header from './header.vue';
 export default {
+  components:{
+    FooterBox:Footer,
+    HeaderBox:Header
+  },
   data() {
     return {
       entry: [],
@@ -121,7 +129,6 @@ export default {
   methods: {
     getData() {
       this.$axios.get("http://localhost:5050/entry").then(data => {
-        console.log(data);
         this.entry = data.data;
       });
       this.$axios.get("http://localhost:5050/departments").then(data=>{
@@ -202,9 +209,6 @@ div.departments--header h3 {
   margin-left: 13px;
   margin-top:0px;
 }
-div.departments--header{
-
-}
 div.departments--header a {
   margin-top: 5px;
   margin-right: 13px;
@@ -247,6 +251,7 @@ div.departments--item a.router-link-exact-active {
 }
 p.hospital-dynamics--item-title{
   font-size: 10px;
+
 }
 /* 微医全科 */
 div.home-internet-hospital--qk a img {
@@ -259,7 +264,7 @@ div.home-internet-hospital--qk a {
   border-radius: 10px;
 }
 hr {
-  width: 90%;
+  width: 100%;
 }
 /* 就诊动态 */
 div.hospital-dynamics div.hospital-dynamics--header {
@@ -301,6 +306,7 @@ div.hospital-dynamics--item-description span:last-child {
 }
 p.hospital-dynamics--item-title {
   padding-left: 13px;
+  padding-right: 13px;
 }
 div.we-swipe--container {
   height: 120px;

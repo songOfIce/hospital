@@ -1,5 +1,6 @@
 <template>
   <div>
+    <header-box></header-box>
     <div class="entries">
       <div class="entry-card">
         <div class="entry-card-item">
@@ -141,10 +142,17 @@
         </div>
       </div>
     </div>
+    <footer-box></footer-box>
   </div>
 </template>
 <script>
+import Footer from './footer.vue';
+import Header from './header.vue'
 export default {
+components:{
+  footerBox:Footer,
+  HeaderBox:Header
+},
   data(){
     return {
       Selection:[]
@@ -256,7 +264,7 @@ div.sns-tabbar {
 }
 /* post-header */
 div.post-header div.user-name{
-  margin-left:-30px;
+  margin-left:-50px;
   color: #4F5264;
 }
 div.post-header a{

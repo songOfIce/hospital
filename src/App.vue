@@ -1,14 +1,6 @@
 <template>
   <div id="app-container">
-    <div class="title">
-      <h4>微医(挂号网)-互联网医院在线诊疗平台</h4>
-      <hr>
-    </div>
-    <div>
-      <header-box></header-box>
-    </div>
-      <router-view></router-view>
-      <footer-box></footer-box>
+      <router-view></router-view>    
   </div>
 </template>
 
@@ -25,6 +17,7 @@ div.title h4 {
 a{
   text-decoration: none;
   color: #5f697a;
+  -webkit-tap-highlight-color: transparent;
 }
 input{
   border: 1px solid #EBECF1;

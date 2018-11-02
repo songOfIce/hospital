@@ -1,4 +1,9 @@
 <template>
+<div>
+   <div class="title">
+      <h4>微医(挂号网)-互联网医院在线诊疗平台</h4>
+      <hr>
+    </div>
   <!-- 搜索框 -->
   <div class="header">
     <div class="header_search">
@@ -16,17 +21,18 @@
       </router-link>
     </div>
   </div>
+  </div>
 </template>
 <script>
 export default {
   name:"header-box"
 };
 </script>
-
 <style>
 div.header{
   display: flex;
   justify-content: space-around;
+  margin-bottom: 10px;
 }
 div.header_search input {
   width: 320px;
@@ -35,7 +41,6 @@ div.header_search input {
   font-size: 14px;
 }
 div.header_search {
-  width: 90%;
   display: flex;
   font-size: 14px;
   justify-content: space-around;
@@ -54,9 +59,6 @@ div.search i{
 }
 div.search input{
   padding-left:30px;
-}
-div.header_search span.header_text {
-  color: #d8c29e;
 }
 div.header_search span.header_text{
   color: #D8C29E;
