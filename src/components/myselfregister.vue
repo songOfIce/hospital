@@ -32,12 +32,40 @@
     <router-link to="">《法律声明及隐私权政策》</router-link>
   </div>
   </div>
+  <!-- 目录 -->
+  <div class="directory-listing">
+    <ul>
+      <li>
+        <router-link to=""><img src="../../public/img/myself/2018-11-03_155010.png" alt="">首页</router-link>
+      </li>
+      <li>
+        <router-link to=""><img src="../../public/img/myself/2018-11-03_155037.png" alt="">在线问诊</router-link>
+      </li>
+      <li>
+        <router-link to=""><img src="../../public/img/myself/2018-11-03_154833.png" alt="">疾病导诊</router-link>
+      </li>
+      <li>
+        <router-link to=""><img src="../../public/img/myself/2018-11-03_155120.png" alt="">我的关注</router-link>
+      </li>
+      <li>
+        <router-link to=""><img src="../../public/img/myself/2018-11-03_155300.png" alt="">频道导航</router-link>
+      </li>
+      <li>
+        <router-link to=""><img src="../../public/img/myself/2018-11-03_155325.png" alt="">个人中心</router-link>
+      </li>
+    </ul>
+  </div>
+  <div class="directory">
+    <img src="../../public/img/myself/weiyi-logo-blue.png" alt="">
+  </div>
 </div>
 </template>
 
 <script>
 export default {
-
+  data(){
+    
+  }
 }
 </script>
 
@@ -117,4 +145,60 @@ div.register-footer-bottom a,div.register-footer-header a{
 div.register-footer-bottom{
   margin:10px;
 }
+div.directory img{
+  height: 45px;
+  width: 45px;
+}
+div.directory{
+  position: relative;
+  top: 10px;
+
+}
+div.directory-listing ul{
+  list-style:none;
+  padding-left: 0px;
+  margin:0px;
+  width: 100px;
+  border-radius: 10px;
+}
+div.directory-listing img{
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+div.directory-listing a{
+  color:#333333;
+  font-size: 14px;
+}
+div.directory-listing{
+  border: 1px #2F7FE2 solid;
+  border-radius: 10px;
+  width: 100px;
+  position: relative;
+  z-index: 1;
+  display: none;
+}
+div.directory-listing ul li{
+  border-bottom: 1px #5B99E8 solid;
+  padding-top:10px;
+  padding-bottom: 10px;
+}
+div.directory-listing ul li:last-child{
+  border-bottom:0;
+  border-radius: 10px;
+}
+div.directory-listing:before{
+  content: " ";
+  position: absolute;
+  top: 98%;
+  left: 15px;
+  width: 10px;
+  height: 10px;
+  border:1px solid #2F7FE2;
+  border-left: 0px;
+  border-top: 0px;
+  transform: rotate(45deg);
+  background: #FFFFFF;
+  z-index: 2;
+} 
 </style>

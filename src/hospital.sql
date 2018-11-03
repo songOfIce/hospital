@@ -177,3 +177,12 @@ INSERT INTO discover VALUES(null,"睡够8小时，为什么还觉得累？","教
 INSERT INTO discover VALUES(null,"吃完9吨食物，一生就终结了？","送你一张“长寿处方”","http://localhost:5050/img/health/H5D23169073.jpg","健康咨询");
 INSERT INTO discover VALUES(null,"新房除甲醛，别踩这2个雷","家有孕妇、幼儿，一定要注意这些！","http://localhost:5050/img/health/gjA37696962.jpg","健康咨询");
 INSERT INTO discover VALUES(null,"睡前1小时，做好这7件事！","养生关键期，请对号入座","http://localhost:5050/img/health/xYC29104604.jpg","健康咨询");
+CREATE TABLE user(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR(30),
+  password VARCHAR(30)
+);
+INSERT INTO user VALUES(null,"fangyuan","123456");
+INSERT INTO user VALUES(null,"liushengqiang","654321");
+INSERT INTO user VALUES(null,"lvlu","123456");
+INSERT INTO user VALUES(null,"pengyaping","145678");
