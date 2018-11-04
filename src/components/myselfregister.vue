@@ -10,15 +10,16 @@
   <div class="register-section">
     <div class="register-section-o">
     <i></i>
-    <input type="text" placeholder="手机号">
+    <input type="text" placeholder="手机号" v-model="username">
     </div>
     <div class="register-section-t">
     <i></i>
-    <input type="text" placeholder="验证码">
+    <input type="password" placeholder="密码" v-model="password">
+    <span>{{msg}}</span>
     </div>
   </div>
   <!-- 确认按钮 -->
-  <router-link to="" class="affirm">确认</router-link>
+  <button class="affirm" @click="register()">确认</button>
   <!-- footer -->
   <div class="register-footer">
   <div class="register-footer-header">
@@ -33,7 +34,7 @@
   </div>
   </div>
   <!-- 目录 -->
-  <div class="directory-listing">
+  <div class="directory-listing" :class="show?'active':''">
     <ul>
       <li>
         <router-link to=""><img src="../../public/img/myself/2018-11-03_155010.png" alt="">首页</router-link>
@@ -55,7 +56,7 @@
       </li>
     </ul>
   </div>
-  <div class="directory">
+  <div class="directory" @click="getshow()">
     <img src="../../public/img/myself/weiyi-logo-blue.png" alt="">
   </div>
 </div>
@@ -64,21 +65,48 @@
 <script>
 export default {
   data(){
-    
-  }
+    return{
+    show:false,
+    username:"",
+    password:"",
+    msg:""
+    }
+  },
+  methods:{
+    getshow(){
+      this.show=!this.show;
+    },
+    //注册
+    register(){
+      var reg = /^1\d{10}$/;
+      if(!reg.test(this.username)){return this.msg="用户名格式不正确"};
+      if(!this.username ||!this.password){return this.msg="用户名密码不能为空"};
+      this.$axios.post("http://localhost:5050/register",`username=${this.username}&password=${this.password}`).then(res=>{
+        console.log(res.data);
+        this.msg = res.data;
+        if(this.msg="注册成功"){
+          this.$router.push({path:'/home/myselflogin'});
+        }
+      })
+    }
+  },
+
 }
 </script>
 
 <style scoped>
 div.register{
   position: relative;
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  box-shadow: 0px 0px 10px 5px #f6f6f7;
+  line-height: 40px;
 }
 div.register h3{
   text-align: center;
   color: #28354C;
   font-weight: 400;
+  height: 40px;
 }
 div.register-header{
   position:absolute;
@@ -95,7 +123,7 @@ div.register-section-o input,div.register-section-t input{
   margin-top:10px;
   padding-left: 30px;
 }
-a.affirm{
+button.affirm{
   border: 1px solid #2F7FE2;
   text-align: center;
   color: #FFFFFF;
@@ -107,6 +135,7 @@ a.affirm{
   margin-top:20px;
   width: 90%;
   margin:0 auto;
+  outline: none;
 }
 div.register-section-t{
   margin-bottom: 10px;
@@ -139,7 +168,7 @@ div.register-footer{
   text-align: center;
   font-size: 14px;
 }
-div.register-footer-bottom a,div.register-footer-header a{
+div.register-footer-bottom a,div.register-footer-header button{
   color: #3278EE;
 }
 div.register-footer-bottom{
@@ -150,8 +179,9 @@ div.directory img{
   width: 45px;
 }
 div.directory{
-  position: relative;
-  top: 10px;
+  position: absolute;
+  bottom:30px;
+  margin-left: 13px;
 
 }
 div.directory-listing ul{
@@ -166,7 +196,7 @@ div.directory-listing img{
   height: 18px;
   vertical-align: middle;
 }
-div.directory-listing a{
+div.directory-listing button{
   color:#333333;
   font-size: 14px;
 }
@@ -176,7 +206,12 @@ div.directory-listing{
   width: 100px;
   position: relative;
   z-index: 1;
-  display: none;
+  margin-left: 13px;
+  opacity: 0;
+  transition: all 2s;
+}
+div.directory-listing.active{
+  opacity: 1;
 }
 div.directory-listing ul li{
   border-bottom: 1px #5B99E8 solid;

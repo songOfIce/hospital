@@ -8,6 +8,12 @@
 export default {};
 </script>
 <style>
+body{
+  margin: 0px !important;
+}
+h3{
+  margin: 0px;
+}
 div.title h4 {
   text-align: center;
   font-weight: lighter;

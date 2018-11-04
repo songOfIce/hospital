@@ -49,7 +49,7 @@ div.footer {
   background: #ffffff;
   bottom: 0;
   position: fixed;
-  width: 95%;
+  width: 100%;
 }
 div.footer-nav a:first-child i{
   display: block;

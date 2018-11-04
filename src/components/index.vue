@@ -159,7 +159,7 @@ p.home-main-entry--item-description{
 }
 div.home-internet-hospital-top-entry {
   width: 90%;
-  height: 750px;
+  height: 720px;
   box-shadow: 0px 0px 20px 20px #f6f6f7;
   border-radius: 10px;
 }
@@ -270,6 +270,7 @@ hr {
 div.hospital-dynamics div.hospital-dynamics--header {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
 }
 div.hospital-dynamics--header h3 {
   font-weight: 700;

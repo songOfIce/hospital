@@ -264,7 +264,7 @@ div.sns-tabbar {
 }
 /* post-header */
 div.post-header div.user-name{
-  margin-left:-50px;
+  margin-left:-80px;
   color: #4F5264;
 }
 div.post-header a{
