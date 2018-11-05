@@ -76,15 +76,17 @@ export default {
     getshow(){
       this.show=!this.show;
     },
+    created() {
+     
+    },
     //注册
     register(){
       var reg = /^1\d{10}$/;
       if(!reg.test(this.username)){return this.msg="用户名格式不正确"};
       if(!this.username ||!this.password){return this.msg="用户名密码不能为空"};
       this.$axios.post("http://localhost:5050/register",`username=${this.username}&password=${this.password}`).then(res=>{
-        console.log(res.data);
         this.msg = res.data;
-        if(this.msg="注册成功"){
+        if(this.msg=="注册成功"){
           this.$router.push({path:'/home/myselflogin'});
         }
       })

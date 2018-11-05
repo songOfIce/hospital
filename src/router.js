@@ -6,7 +6,8 @@ import health from './components/health.vue'
 import myselflogin from './components/myselflogin.vue'
 import discover from './components/discover.vue'
 import myselfregister from './components/myselfregister.vue'
-import details from './components/details.vue'
+import news from './components/news.vue'
+import personage from './components/personage'
 Vue.use(Router)
 
 export default new Router({
@@ -38,8 +39,12 @@ export default new Router({
       component:discover
     },
     {
-      path:'/home/details',
-      component:details
-    }
+      path:'/home/news',
+      component:news
+    },
+     {
+      path:'/home/personage',
+      component:personage
+    },
   ]
 })

@@ -12,7 +12,7 @@ import { Swipe, SwipeItem} from 'mint-ui'
 import{Toast} from 'mint-ui'
 Vue.component(Swipe.name,Swipe)
 Vue.component(SwipeItem.name,SwipeItem)
-Vue.component(Toast.name,Toast)
+Vue.prototype.$toast = Toast;
 
 
 

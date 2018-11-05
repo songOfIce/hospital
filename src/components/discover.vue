@@ -9,7 +9,6 @@
       </div>
     </div>
     <!-- 资讯 -->
-    <div class="div-hr"></div>
     <div class="body" v-for="item of discover" :key="item.index">
       <section class="left-right-layout">
         <div class="left-title">
@@ -27,7 +26,7 @@
       <span>{{item.titleconsult}}</span>
       <div class="health-footer-list">...</div>
     </div>
-    <div class="div-hr"></div>
+      <div class="div-hr"></div>
     </div>
     <!-- policy -->
     <footer-box></footer-box>
@@ -59,8 +58,18 @@ components:{
 
 <style scoped>
 div.tab-find{
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  z-index: 1;
+  background: #ffffff;
+  top:0px;
+  box-shadow: 0px 0px 5px 5px #F8F8F8;
+}
+div.body{
+  margin-top:60px;
 }
 div.tab-find ul{
   display: flex;

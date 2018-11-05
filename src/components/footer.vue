@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
     <hr>
-     <div class="footer-nav" >
-     <router-link :to="link[i]" v-for="(p,i) in list" :key="i">
+     <div class="footer-nav">
+     <router-link :to="i!=4?link[i]:uname?'/home/personage':link[i]" v-for="(p,i) in list" :key="i">
        <i :class="i==index?'active':' '"></i>
        <p>{{p}}</p>
      </router-link>
@@ -33,11 +33,13 @@ export default {
     return {
       list:["微医","严选","健康","发现","我"],
       link:["/home/index","/home/homes","/home/health","/home/discover","/home/myselflogin"],
-      index:0
+      index:0,
+      uname:sessionStorage['username']
     };
   },
   created() {
     this.index=this.link.indexOf(this.$route.path)
+    console.log(this.uname);
   },
   methods:{
 

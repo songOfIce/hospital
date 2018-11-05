@@ -74,10 +74,17 @@ export default {
     },
     //登录
     login(){
+        sessionStorage.setItem("username",this.username);
+      if(!this.username || !this.password){return this.msg="账号密码不能为空"};
       this.$axios.post("http://localhost:5050/login",`username=${this.username}&password=${this.password}`).then(res=>{
         this.msg = res.data;
-        if(this.msg="登录成功")
-        this.$router.push({path:'home/personage'})
+        if(this.msg=="登录成功"){
+          this.$toast({
+          message:"登录成功",
+          position:"middle"
+          })
+        this.$router.push({path:'/home/personage'});
+        }
       })
     }
   },

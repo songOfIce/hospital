@@ -155,34 +155,53 @@ INSERT INTO Selection VALUES(null,"http://localhost:5050/img/health/154035004522
 -- discover
 CREATE TABLE discover(
   id INT PRIMARY key AUTO_INCREMENT,
+  pid INT AUTO_INCREMENT,
   title VARCHAR(30),
   description VARCHAR(30),
   img VARCHAR(100),
   titleconsult VARCHAR(30)
 );
-INSERT INTO discover VALUES(null,"家有“三高”，中秋月饼怎么挑？"," 避开“油盐糖”，三高人群也能吃月饼！","http://localhost:5050/img/health/7tl23167345.jpg","健康咨询");
-INSERT INTO discover VALUES(null,"春节吃坚果会变胖？这样吃不胖","【春节特辑】瓜子、腰果、板栗，哪种坚果不胖人？","http://localhost:5050/img/health/a3c23168112.jpg","健康咨询");
-INSERT INTO discover VALUES(null,"火锅里漂着的“红油”是什么？","请收下这份《鉴别锅底大法》","http://localhost:5050/img/health/YHR22220869.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,"家有“三高”，中秋月饼怎么挑？"," 避开“油盐糖”，三高人群也能吃月饼！","http://localhost:5050/img/health/7tl23167345.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,"春节吃坚果会变胖？这样吃不胖","【春节特辑】瓜子、腰果、板栗，哪种坚果不胖人？","http://localhost:5050/img/health/a3c23168112.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,"火锅里漂着的“红油”是什么？","请收下这份《鉴别锅底大法》","http://localhost:5050/img/health/YHR22220869.jpg","健康咨询");
 INSERT INTO discover VALUES(null,"峨嵋畅气通络治疗腰椎病","实际生活中免不了的加班、熬夜玩游戏，这种久坐不动的情况却让腰间盘承受了很大的压力。久而久之，还会导致腰间盘突出症状的出现。
 峨嵋畅气通络治疗腰椎病","http://localhost:5050/img/health/A-4.0.0-339-226-9.png","健康咨询");
-INSERT INTO discover VALUES(null,"味精加热会致癌，鸡精更好？","5个食品真相告诉你朋友圈有多「毒」！","http://localhost:5050/img/health/A-4.0.0-339-226.jpg","健康咨询");
-INSERT INTO discover VALUES(null,"味精加热会致癌，鸡精更好？","5个食品真相告诉你朋友圈有多「毒」！","http://localhost:5050/img/health/vR423169076.jfif","健康咨询");
-INSERT INTO discover VALUES(null,"早上一杯豆浆，易得乳腺癌？","食用豆制品，有哪些事情要注意？","http://localhost:5050/img/health/7tf23168569.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,"味精加热会致癌，鸡精更好？","5个食品真相告诉你朋友圈有多「毒」！","http://localhost:5050/img/health/A-4.0.0-339-226.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,"味精加热会致癌，鸡精更好？","5个食品真相告诉你朋友圈有多「毒」！","http://localhost:5050/img/health/vR423169076.jfif","健康咨询");
+INSERT INTO discover VALUES(null,null,"早上一杯豆浆，易得乳腺癌？","食用豆制品，有哪些事情要注意？","http://localhost:5050/img/health/7tf23168569.jpg","健康咨询");
 INSERT INTO discover VALUES(null,"高血脂的下一步是中风？快预防 ","预防中风，没有“他”真不行……","http://localhost:5050/img/health/JTE22536695.jpg","健康咨询");
-INSERT INTO discover VALUES(null,"医生说｜一不小心就治疗过度！腰突症的误区你进了吗 ？"," 腰椎间盘突出症，可以算是一种“都市高发”疾病了多少人办公桌前忙忙碌碌一天，回到家瘫在沙发上，隐隐感受到腰酸背痛然后有一天体检报告入手...","http://localhost:5050/img/health/1533260138742.jpg","健康咨询");
-INSERT INTO discover VALUES(null,">28岁男，2016年5月发病，当时咽喉剧痛异物感，头晕乏力，极度疲劳和低烧"," 5位医生已抢答","http://localhost:5050/img/health/sns-help-pic1.png","大家帮");
-INSERT INTO discover VALUES(null,"热得吃不下饭，营养怎么补足？","【每周精选】“不吃饭”的营养大法。","http://localhost:5050/img/health/QQX23169295.jpg","大家帮");
-INSERT INTO discover VALUES(null,"梨润肺止咳？不是所有人能吃"," 梨，这样吃最好","http://localhost:5050/img/health/wh020364016.jpg","健康咨询");
-INSERT INTO discover VALUES(null,"睡够8小时，为什么还觉得累？","教你6招找回好睡眠","http://localhost:5050/img/health/h2K21366689.jpg","健康咨询");
-INSERT INTO discover VALUES(null,"吃完9吨食物，一生就终结了？","送你一张“长寿处方”","http://localhost:5050/img/health/H5D23169073.jpg","健康咨询");
-INSERT INTO discover VALUES(null,"新房除甲醛，别踩这2个雷","家有孕妇、幼儿，一定要注意这些！","http://localhost:5050/img/health/gjA37696962.jpg","健康咨询");
-INSERT INTO discover VALUES(null,"睡前1小时，做好这7件事！","养生关键期，请对号入座","http://localhost:5050/img/health/xYC29104604.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,"医生说｜一不小心就治疗过度！腰突症的误区你进了吗 ？"," 腰椎间盘突出症，可以算是一种“都市高发”疾病了多少人办公桌前忙忙碌碌一天，回到家瘫在沙发上，隐隐感受到腰酸背痛然后有一天体检报告入手...","http://localhost:5050/img/health/1533260138742.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,">28岁男，2016年5月发病，当时咽喉剧痛异物感，头晕乏力，极度疲劳和低烧"," 5位医生已抢答","http://localhost:5050/img/health/sns-help-pic1.png","大家帮");
+INSERT INTO discover VALUES(null,null,"热得吃不下饭，营养怎么补足？","【每周精选】“不吃饭”的营养大法。","http://localhost:5050/img/health/QQX23169295.jpg","大家帮");
+INSERT INTO discover VALUES(null,null,"梨润肺止咳？不是所有人能吃"," 梨，这样吃最好","http://localhost:5050/img/health/wh020364016.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,"睡够8小时，为什么还觉得累？","教你6招找回好睡眠","http://localhost:5050/img/health/h2K21366689.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,"吃完9吨食物，一生就终结了？","送你一张“长寿处方”","http://localhost:5050/img/health/H5D23169073.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,"新房除甲醛，别踩这2个雷","家有孕妇、幼儿，一定要注意这些！","http://localhost:5050/img/health/gjA37696962.jpg","健康咨询");
+INSERT INTO discover VALUES(null,null,"睡前1小时，做好这7件事！","养生关键期，请对号入座","http://localhost:5050/img/health/xYC29104604.jpg","健康咨询");
 CREATE TABLE user(
   id INT PRIMARY KEY AUTO_INCREMENT,
   username VARCHAR(30),
-  password VARCHAR(30)
+  password VARCHAR(30),
+  realname VARCHAR(30),
+  realage VARCHAR(30),
+  gender VARCHAR(30),
+  emr INT,
+  doctor INT,
+  coupon INT,
+  healthy INT,
+  rank INT,
+  img VARCHAR(100)
 );
-INSERT INTO user VALUES(null,"fangyuan","123456");
-INSERT INTO user VALUES(null,"liushengqiang","654321");
-INSERT INTO user VALUES(null,"lvlu","123456");
-INSERT INTO user VALUES(null,"pengyaping","145678");
+INSERT INTO user VALUES(null,"zhangbo","123456","张博",25,"男",1,1,1,2,3,"http://localhost:5050/img/personage/timg (4).jpg");
+INSERT INTO user VALUES(null,"fangyuan","123456","方园",25,"男",1,1,1,2,5,"http://localhost:5050/img/personage/timg.png");
+INSERT INTO user VALUES(null,"liushengqiang","123456","刘胜强",23,"男",2,2,4,2,3,"http://localhost:5050/img/personage/timg (1).jpg");
+INSERT INTO user VALUES(null,"pengyaping","123456","彭亚萍",25," 女",3,4,1,5,6,"http://localhost:5050/img/personage/timg (2).jpg");
+INSERT INTO user VALUES(null,"lvlu","123456","吕露",25,"男",3,4,1,5,1,"http://localhost:5050/img/personage/timg.jpg");
+
+
+CREATE TABLE news(
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  title VARCHAR(30),
+  newstime date,
+  
+)
