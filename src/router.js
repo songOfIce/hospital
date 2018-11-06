@@ -7,7 +7,7 @@ import myselflogin from './components/myselflogin.vue'
 import discover from './components/discover.vue'
 import myselfregister from './components/myselfregister.vue'
 import news from './components/news.vue'
-import personage from './components/personage'
+import personage from './components/personage.vue'
 Vue.use(Router)
 
 export default new Router({

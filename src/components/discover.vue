@@ -9,7 +9,7 @@
       </div>
     </div>
     <!-- 资讯 -->
-    <div class="body" v-for="item of discover" :key="item.index">
+    <div class="body" v-for="item of discover" :key="item.index" @click="getpid(item.pid)">
       <section class="left-right-layout">
         <div class="left-title">
           <p class="title">
@@ -40,7 +40,8 @@ components:{
 },
   data(){
     return {
-      discover:[]
+      discover:[],
+      pid:[]
     }
   },
   created() {
@@ -51,6 +52,11 @@ components:{
       this.$axios.get("http://localhost:5050/discover").then(data=>{
         this.discover = data.data;
       })
+    },
+    getpid(pid){
+      this.pid=pid;
+      sessionStorage.setItem("pid",this.pid);
+      this.$router.push({path:"/home/news"});
     }
   }
 }

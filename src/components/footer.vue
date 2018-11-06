@@ -39,7 +39,6 @@ export default {
   },
   created() {
     this.index=this.link.indexOf(this.$route.path)
-    console.log(this.uname);
   },
   methods:{
 

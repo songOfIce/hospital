@@ -174,7 +174,6 @@ export default {
       res:[],
       img:[],
       username:[],
-      alert:null
     }
   },
   created() {
@@ -189,7 +188,6 @@ export default {
       })
     },
     outlogin(){
-      console.log(123);
         sessionStorage.removeItem("username");
         //返回首页
         this.$toast({

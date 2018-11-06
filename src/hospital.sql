@@ -155,29 +155,29 @@ INSERT INTO Selection VALUES(null,"http://localhost:5050/img/health/154035004522
 -- discover
 CREATE TABLE discover(
   id INT PRIMARY key AUTO_INCREMENT,
-  pid INT AUTO_INCREMENT,
+  pid INT,
   title VARCHAR(30),
   description VARCHAR(30),
   img VARCHAR(100),
   titleconsult VARCHAR(30)
 );
-INSERT INTO discover VALUES(null,null,"家有“三高”，中秋月饼怎么挑？"," 避开“油盐糖”，三高人群也能吃月饼！","http://localhost:5050/img/health/7tl23167345.jpg","健康咨询");
-INSERT INTO discover VALUES(null,null,"春节吃坚果会变胖？这样吃不胖","【春节特辑】瓜子、腰果、板栗，哪种坚果不胖人？","http://localhost:5050/img/health/a3c23168112.jpg","健康咨询");
-INSERT INTO discover VALUES(null,null,"火锅里漂着的“红油”是什么？","请收下这份《鉴别锅底大法》","http://localhost:5050/img/health/YHR22220869.jpg","健康咨询");
-INSERT INTO discover VALUES(null,"峨嵋畅气通络治疗腰椎病","实际生活中免不了的加班、熬夜玩游戏，这种久坐不动的情况却让腰间盘承受了很大的压力。久而久之，还会导致腰间盘突出症状的出现。
+INSERT INTO discover VALUES(null,1,"家有“三高”，中秋月饼怎么挑？"," 避开“油盐糖”，三高人群也能吃月饼！","http://localhost:5050/img/health/7tl23167345.jpg","健康咨询");
+INSERT INTO discover VALUES(null,2,"春节吃坚果会变胖？这样吃不胖","【春节特辑】瓜子、腰果、板栗，哪种坚果不胖人？","http://localhost:5050/img/health/a3c23168112.jpg","健康咨询");
+INSERT INTO discover VALUES(null,3,"火锅里漂着的“红油”是什么？","请收下这份《鉴别锅底大法》","http://localhost:5050/img/health/YHR22220869.jpg","健康咨询");
+INSERT INTO discover VALUES(null,4,"峨嵋畅气通络治疗腰椎病","实际生活中免不了的加班、熬夜玩游戏，这种久坐不动的情况却让腰间盘承受了很大的压力。久而久之，还会导致腰间盘突出症状的出现。
 峨嵋畅气通络治疗腰椎病","http://localhost:5050/img/health/A-4.0.0-339-226-9.png","健康咨询");
-INSERT INTO discover VALUES(null,null,"味精加热会致癌，鸡精更好？","5个食品真相告诉你朋友圈有多「毒」！","http://localhost:5050/img/health/A-4.0.0-339-226.jpg","健康咨询");
-INSERT INTO discover VALUES(null,null,"味精加热会致癌，鸡精更好？","5个食品真相告诉你朋友圈有多「毒」！","http://localhost:5050/img/health/vR423169076.jfif","健康咨询");
-INSERT INTO discover VALUES(null,null,"早上一杯豆浆，易得乳腺癌？","食用豆制品，有哪些事情要注意？","http://localhost:5050/img/health/7tf23168569.jpg","健康咨询");
-INSERT INTO discover VALUES(null,"高血脂的下一步是中风？快预防 ","预防中风，没有“他”真不行……","http://localhost:5050/img/health/JTE22536695.jpg","健康咨询");
-INSERT INTO discover VALUES(null,null,"医生说｜一不小心就治疗过度！腰突症的误区你进了吗 ？"," 腰椎间盘突出症，可以算是一种“都市高发”疾病了多少人办公桌前忙忙碌碌一天，回到家瘫在沙发上，隐隐感受到腰酸背痛然后有一天体检报告入手...","http://localhost:5050/img/health/1533260138742.jpg","健康咨询");
-INSERT INTO discover VALUES(null,null,">28岁男，2016年5月发病，当时咽喉剧痛异物感，头晕乏力，极度疲劳和低烧"," 5位医生已抢答","http://localhost:5050/img/health/sns-help-pic1.png","大家帮");
-INSERT INTO discover VALUES(null,null,"热得吃不下饭，营养怎么补足？","【每周精选】“不吃饭”的营养大法。","http://localhost:5050/img/health/QQX23169295.jpg","大家帮");
-INSERT INTO discover VALUES(null,null,"梨润肺止咳？不是所有人能吃"," 梨，这样吃最好","http://localhost:5050/img/health/wh020364016.jpg","健康咨询");
-INSERT INTO discover VALUES(null,null,"睡够8小时，为什么还觉得累？","教你6招找回好睡眠","http://localhost:5050/img/health/h2K21366689.jpg","健康咨询");
-INSERT INTO discover VALUES(null,null,"吃完9吨食物，一生就终结了？","送你一张“长寿处方”","http://localhost:5050/img/health/H5D23169073.jpg","健康咨询");
-INSERT INTO discover VALUES(null,null,"新房除甲醛，别踩这2个雷","家有孕妇、幼儿，一定要注意这些！","http://localhost:5050/img/health/gjA37696962.jpg","健康咨询");
-INSERT INTO discover VALUES(null,null,"睡前1小时，做好这7件事！","养生关键期，请对号入座","http://localhost:5050/img/health/xYC29104604.jpg","健康咨询");
+INSERT INTO discover VALUES(null,5,"味精加热会致癌，鸡精更好？","5个食品真相告诉你朋友圈有多「毒」！","http://localhost:5050/img/health/A-4.0.0-339-226.jpg","健康咨询");
+INSERT INTO discover VALUES(null,6,"味精加热会致癌，鸡精更好？","5个食品真相告诉你朋友圈有多「毒」！","http://localhost:5050/img/health/vR423169076.jfif","健康咨询");
+INSERT INTO discover VALUES(null,7,"早上一杯豆浆，易得乳腺癌？","食用豆制品，有哪些事情要注意？","http://localhost:5050/img/health/7tf23168569.jpg","健康咨询");
+INSERT INTO discover VALUES(null,8,"高血脂的下一步是中风？快预防 ","预防中风，没有“他”真不行……","http://localhost:5050/img/health/JTE22536695.jpg","健康咨询");
+INSERT INTO discover VALUES(null,9,"医生说｜一不小心就治疗过度！腰突症的误区你进了吗 ？"," 腰椎间盘突出症，可以算是一种“都市高发”疾病了多少人办公桌前忙忙碌碌一天，回到家瘫在沙发上，隐隐感受到腰酸背痛然后有一天体检报告入手...","http://localhost:5050/img/health/1533260138742.jpg","健康咨询");
+INSERT INTO discover VALUES(null,10,">28岁男，2016年5月发病，当时咽喉剧痛异物感，头晕乏力，极度疲劳和低烧"," 5位医生已抢答","http://localhost:5050/img/health/sns-help-pic1.png","大家帮");
+INSERT INTO discover VALUES(null,11,"热得吃不下饭，营养怎么补足？","【每周精选】“不吃饭”的营养大法。","http://localhost:5050/img/health/QQX23169295.jpg","大家帮");
+INSERT INTO discover VALUES(null,12,"梨润肺止咳？不是所有人能吃"," 梨，这样吃最好","http://localhost:5050/img/health/wh020364016.jpg","健康咨询");
+INSERT INTO discover VALUES(null,13,"睡够8小时，为什么还觉得累？","教你6招找回好睡眠","http://localhost:5050/img/health/h2K21366689.jpg","健康咨询");
+INSERT INTO discover VALUES(null,14,"吃完9吨食物，一生就终结了？","送你一张“长寿处方”","http://localhost:5050/img/health/H5D23169073.jpg","健康咨询");
+INSERT INTO discover VALUES(null,15,"新房除甲醛，别踩这2个雷","家有孕妇、幼儿，一定要注意这些！","http://localhost:5050/img/health/gjA37696962.jpg","健康咨询");
+INSERT INTO discover VALUES(null,16,"睡前1小时，做好这7件事！","养生关键期，请对号入座","http://localhost:5050/img/health/xYC29104604.jpg","健康咨询");
 CREATE TABLE user(
   id INT PRIMARY KEY AUTO_INCREMENT,
   username VARCHAR(30),
@@ -201,7 +201,54 @@ INSERT INTO user VALUES(null,"lvlu","123456","吕露",25,"男",3,4,1,5,1,"http:/
 
 CREATE TABLE news(
   id INT PRIMARY KEY AUTO_INCREMENT,
-  title VARCHAR(30),
+  title VARCHAR(100),
+  channel VARCHAR(100),
   newstime date,
-  
-)
+  newsnormal VARCHAR(200),
+  newsgreenone VARCHAR(200),
+  newsgreenone1 VARCHAR(200),
+  -- 高血压
+  newsh3two VARCHAR(200),
+  newsptwo VARCHAR(200),
+  newsgreentwo VARCHAR(200),
+  newsgreentwo2 VARCHAR(200),
+  newsptwo2 VARCHAR(200),
+  -- 高血脂
+  newsh3three VARCHAR(200),
+  newspthree VARCHAR(200),
+  newsgreenthree VARCHAR(200),
+  newsgreenthree2 VARCHAR(200),
+  newspthree2 VARCHAR(200),
+  -- 高血糖
+  newsh3four VARCHAR(200),
+  newspfour VARCHAR(200),
+  newsgreenfour VARCHAR(200),
+  newsgreenfour2 VARCHAR(200),
+  img1 VARCHAR(100),
+  img2 VARCHAR(100)
+);
+INSERT INTO news VALUES(null,"家有“三高”，中秋月饼怎么挑？","来自营养频道","2018-09-21","中秋节，全家老小一起边吃月饼边赏月，是一家团圆、生活美满的象征。那么，要怎么挑选月饼，才能让家里的","三高","也在团圆之夜，吃上一口象征团圆的月饼呢?","高血压：不宜吃鲜肉榨菜月饼","鲜肉榨菜月饼深受“月饼咸党”们的喜爱，它酥脆的外皮包裹着咸香的肉馅，口感十分独特。这类月饼近年来屡有创新，除了榨菜鲜肉之外，还有萝卜丝鲜肉、梅菜咸肉月饼。这些月饼中的配菜都是经过腌制的，所以它们有一个共同的特点，那就是——","含盐量高","。这类月饼食用后可能会引起血压波动。","另外，蛋黄莲蓉月饼由于含油量较高，食用后会引起血液粘稠度升高，所以也不适合高血压人群食用。","高血脂：不宜吃蛋黄莲蓉月饼","蛋黄莲蓉月饼的","含油量达30%以上","，食用后会引起血中甘油三酯和胆固醇含量升高，不适合高血脂人群使用。","五仁月饼内虽然含有不少坚果仁，但传统广式五仁月饼馅料中含有“冰肉”，这是用酒和糖腌制过的肥猪肉！所以，它对高血脂人群来说，也不是什么好东西。","高血糖：不宜吃五仁、豆沙月饼","五仁、豆沙等月饼的馅料都调得","比较甜","，食用后会使血糖快速升高，因此不适合糖尿病人群食用。另外，冰皮月饼是用糯米、白砂糖、炼乳及各种馅料做成，虽然比传统月饼少油少糖，但对于糖尿病人群来说负担还是较大。","https://kano.guahao.cn/eJD23165957","https://h2img.guahao.com/portal_upload/mediafocus/1474335509588.jpg");
+INSERT INTO news VALUES(null,"春节吃坚果会变胖？这样吃不胖","来自营养频道","2018-02-19","坚果，又称干果，它外面包裹着坚硬的果壳，里面则是种仁或胚乳。","因为营养丰富","、味美，坚果一直是煲剧、聚会、闲聊的必备小吃。在春节期间，每家每户都会在大厅内摆上各色坚果，用来招待串门子的亲戚好友。","不同坚果的营养价值","常见的坚果可以分成两类：一类是树坚果，包括杏仁、腰果、榛子、山核桃、松子、核桃、板栗、","白果(银杏)","、开心果、夏威夷果等；另一类是种子，包括花生、葵花子、南瓜子、西瓜子等。","另外，蛋黄莲蓉月饼由于含油量较高，食用后会引起血液粘稠度升高，所以也不适合高血压人群食用。","总体来讲，坚果的营养价值是比较高的。但不同坚果的","营养成分差异较大","，如：","最高为58.8%，最低为1.3%；蛋白质含量最高为36%，最低为4.8%；碳水化合物最高为72.6%，最低为7.9%。","减肥or增肥，该吃哪些坚果？","不同坚果的营养成分差别比较大，所以一家人在吃坚果时也可根据各自的情况选择，比如：","不同坚果的营养成分差别比较大，所以一家人在吃坚果时也可根据各自的情况选择，比如：","想减肥","，或高血脂、冠心病、动脉硬化的人群来说，可以多吃些板栗和白果，少吃一些核桃、松子、葵花子、榛子、花生、杏仁它们都含有较多的脂肪，容易引起肥胖和血脂升高。","https://kano.guahao.cn/Xf323166401","https://h2img.guahao.com/portal_upload/mediafocus/1484880286205.png");
+CREATE TABLE commits(
+  -- 评论
+  id INT PRIMARY key AUTO_INCREMENT,
+  pid INT,
+  hotcommentsimg VARCHAR(100),
+  hotcommentsuser VARCHAR(8),
+  hotcity time,
+  hotcommentwords VARCHAR(30)
+);
+INSERT INTO commits VALUES(null,1,"https://h2img.guahao.com/portal_upload/userheadpic/gdT27810879_60x60.?timeStamp=1541496242187","肖冰玉","2018-10-06","不喜欢吃月饼，总觉得对健康不利！");
+INSERT INTO commits VALUES(null,1,"https://h2img.guahao.com/portal_upload/userheadpic/gdT27810879_60x60.?timeStamp=1541496242187","方园","2018-10-06","水是最好的药.药补不如食补.食补不如水补.好水决定体质.健康长寿水为先!");
+INSERT INTO commits VALUES(null,1,"https://h2img.guahao.com/portal_upload/userheadpic/gdT27810879_60x60.?timeStamp=1541496242187","彭亚萍","2018-10-06","嗯嗯好的");
+INSERT INTO commits VALUES(null,1,"https://h2img.guahao.com/portal_upload/userheadpic/gdT27810879_60x60.?timeStamp=1541496242187","匿名","2018-10-06","有的哦！");
+INSERT INTO commits VALUES(null,1,"https://h2img.guahao.com/portal_upload/userheadpic/gdT27810879_60x60.?timeStamp=1541496242187","匿名","2018-10-06","三高有血压高吗");
+INSERT INTO commits VALUES(null,2,"https://h2img.guahao.com/portal_upload/userheadpic/gdT27810879_60x60.?timeStamp=1541496242187","匿名","2018-10-06","学习");
+INSERT INTO commits VALUES(null,2,"https://h2img.guahao.com/portal_upload/userheadpic/gdT27810879_60x60.?timeStamp=1541496242187","匿名","2018-10-06","好");
+INSERT INTO commits VALUES(null,2,"https://h2img.guahao.com/portal_upload/userheadpic/gdT27810879_60x60.?timeStamp=1541496242187","匿名","2018-10-06","不错");
+INSERT INTO commits VALUES(null,2,"https://h2img.guahao.com/portal_upload/userheadpic/gdT27810879_60x60.?timeStamp=1541496242187","匿名","2018-10-06","不错哦");
+INSERT INTO commits VALUES(null,2,"https://h2img.guahao.com/portal_upload/userheadpic/gdT27810879_60x60.?timeStamp=1541496242187","匿名","2018-10-06","可以哦");
+
+
+
+
