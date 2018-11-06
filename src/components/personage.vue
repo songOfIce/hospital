@@ -185,6 +185,7 @@ export default {
     personage(){
       this.$axios.post("http://localhost:5050/personage",`username=${this.username}`).then(res=>{
         this.res = res.data;
+        console.log(this.res);
       })
     },
     outlogin(){

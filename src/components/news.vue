@@ -59,7 +59,7 @@
     <ul>
       <li class="news-hotcomments" v-for="item of comment" :key="item.index">
         <div class="news-hotcomments-comment">
-          <img src="https://h2img.guahao.com/portal_upload/userheadpic/Crb27810575_60x60.?timeStamp=1541475472075" alt="">
+          <img :src="item.hotcommentsimg" alt="">
           <p class="user-name">{{item.hotcommentsuser}}</p>
         </div>
         <div class="comment-area">
