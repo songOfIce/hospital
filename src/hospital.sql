@@ -29,7 +29,7 @@ INSERT INTO departments VALUES(null,"http://localhost:5050/img/index/VkX47057137
 INSERT INTO departments VALUES(null,"http://localhost:5050/img/index/Dow47057217.jpg","耳鼻咽喉科","医生1W+");
 INSERT INTO departments VALUES(null,"http://localhost:5050/img/index/MX547057254.jpg","外科","医生8W+");
 INSERT INTO departments VALUES(null,"http://localhost:5050/img/index/Sdz48159326.jpg","皮肤科","医生9W+");
-INSERT INTO departments VALUES(null,"http://localhost:5050/img/index/VqB47057039.jpg","妇科科","医生1W+");
+INSERT INTO departments VALUES(null,"http://localhost:5050/img/index/VqB47057039.jpg","妇科","医生1W+");
 -- swipe
 CREATE TABLE doctor(
   id INT PRIMARY KEY AUTO_INCREMENT,

@@ -55,21 +55,6 @@
   </div>
   </div>
   <!-- 评论 -->
-  <div>
-    <ul>
-      <li class="news-hotcomments" v-for="item of comment" :key="item.index">
-        <div class="news-hotcomments-comment">
-          <img :src="item.hotcommentsimg" alt="">
-          <p class="user-name">{{item.hotcommentsuser}}</p>
-        </div>
-        <div class="comment-area">
-          <img src="../../public/img/details/hot-comment.png" alt="">
-        </div>
-        <span class="city">不限 {{item.hotcity}}</span>
-        <p class="comment-words">{{item.hotcommentwords}}</p>
-      </li>
-    </ul>
-  </div>
   <comment-box :pid="pid"></comment-box>
   
   </div>
@@ -84,27 +69,20 @@ export default {
   data () {
     return {
       res:[],
-      pid:[],
-      comment:[]
+      pid:[]
     }
   },
   created() {
     var pid = sessionStorage.getItem("pid");
     this.pid=pid;
     this.getdetail();
-    this.getcomment();
   },
   methods:{
     getdetail (){
       this.$axios.post("http://localhost:5050/news",`pid=${this.pid}`).then(res=>{
         this.res = res.data;
       })
-    },
-    getcomment(){
-      this.$axios.post("http://localhost:5050/comment",`pid=${this.pid}`).then(res=>{
-        this.comment = res.data;
-      })
-    },
+    }
   }
 }
 </script>
@@ -235,51 +213,5 @@ div.hotcomments h3{
   margin-left: 13px;
 }
 /* 评论 */
-div.news-hotcomments-comment{
-  display: flex;
-}
-div.news-hotcomments-comment img{
-  height: 40px;
-  width: 40px;
-}
-li.news-hotcomments{
-  position: relative;
-  padding-left: 13px;
-  padding-right: 13px;
-  border-bottom: 1px solid #F0F0F0;
-  height: 80px;
-}
-ul{
-  list-style: none;
-  padding: 0px;
-}
-div.comment-area{
-  position: absolute;
-  right: 13px;
-  top:0px;
-}
-li.news-hotcomments span{
-  position: absolute;
-  top:20px;
-  left: 80px;
-  font-size: 12px;
-  color: #999999;
-}
-li.news-hotcomments ul li p{
-  position: absolute;
-  left: 80px;
-}
-li.news-hotcomments p.user-name{
-  position: absolute;
-  color: #999999;
-  font-size: 12px;
-  left: 80px;
-}
-p.comment-words{
-  position: absolute;
-  top:40px;
-  left: 80px;
-  color: #999999;
-  font-size: 12px;
-}
+
 </style>

@@ -3,7 +3,7 @@
     <div v-for="item of res" :key="item.index">
     <!-- 头部 -->
     <div class="personage-header">
-      <router-link to="/home/index">&lt;</router-link>
+      <router-link to="/home/index"><img src="../../public/img/personage/back.png" alt=""></router-link>
       <h3>我</h3>
     </div>
     <!-- top -->
@@ -185,7 +185,6 @@ export default {
     personage(){
       this.$axios.post("http://localhost:5050/personage",`username=${this.username}`).then(res=>{
         this.res = res.data;
-        console.log(this.res);
       })
     },
     outlogin(){
@@ -215,6 +214,12 @@ div.personage-header {
   line-height: 40px;
   background: #ffffff;
   z-index: 1;
+}
+div.personage-header img{
+  height: 20px;
+  width: 20px;
+  margin-top: 10px;
+  margin-left: 13px;
 }
 div.personage-header h3 {
   font-weight: 500;

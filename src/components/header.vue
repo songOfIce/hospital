@@ -9,7 +9,7 @@
     <div class="header_search">
       <div class="search">
         <i></i>
-        <input type="text" placeholder="搜索医院,医生,科室,疾病">
+        <input type="text" placeholder="搜索医院,医生,科室,疾病,资讯" @click="search()">
       </div>
       <router-link to="">
         <span>
@@ -25,7 +25,12 @@
 </template>
 <script>
 export default {
-  name:"header-box"
+  name:"header-box",
+  methods:{
+    search(){
+      this.$router.push({path:"/home/search"});
+    }
+  }
 };
 </script>
 <style>

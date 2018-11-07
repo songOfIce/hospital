@@ -2,7 +2,9 @@
 <div>
     <div class="inner">
       <div class="inner-index">
-        <router-link to="/home/index"> &lt; </router-link>
+        <router-link to="/home/index">
+        <img src="../../public/img/personage/back.png" alt="">
+        </router-link>
       </div>
       <h3>登录</h3>
     </div>
@@ -92,8 +94,14 @@ export default {
 </script>
 
 <style scoped>
+div.inner-index img{
+  height: 20px;
+  width: 20px;
+  margin-top:10px;
+  margin-left: 13px;
+}
 div.action{
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 div.action-gbn button{

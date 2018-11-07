@@ -2,7 +2,9 @@
 <div>
   <div class="register">
     <div class="register-header">
-        <router-link to="/home/index"> &lt; </router-link>
+        <router-link to="/home/index">
+        <img src="../../public/img/personage/back.png" alt="">
+        </router-link>
     </div>
     <h3>快速登录/注册</h3>
   </div>
@@ -113,9 +115,15 @@ div.register h3{
 div.register-header{
   position:absolute;
 }
+div.register-header img{
+  height: 20px;
+  width: 20px;
+  margin-top:10px;
+  margin-left: 13px;
+}
 div.register-section{
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
   position: relative;
 }
 div.register-section-o input,div.register-section-t input{
@@ -135,7 +143,7 @@ button.affirm{
   line-height: 45px;
   border-radius: 20px;
   margin-top:20px;
-  width: 90%;
+  width: 100%;
   margin:0 auto;
   outline: none;
 }
@@ -160,9 +168,12 @@ div.register-section-t i{
   top:60px;
   left: 10px;
 }
-div.register-footer-header{
+div.register-footer-header a{
   text-align: center;
-  margin: 20px;
+  color:  #3278EE;
+}
+div.register-footer-header{
+    margin: 20px;
 }
 div.register-footer{
   width: 90%;

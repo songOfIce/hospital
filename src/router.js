@@ -8,6 +8,7 @@ import discover from './components/discover.vue'
 import myselfregister from './components/myselfregister.vue'
 import news from './components/news.vue'
 import personage from './components/personage.vue'
+import search from './components/search.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -46,5 +47,9 @@ export default new Router({
       path:'/home/personage',
       component:personage
     },
+    {
+      path:'/home/search',
+      component:search
+    }
   ]
 })
