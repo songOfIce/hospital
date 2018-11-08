@@ -9,6 +9,7 @@ import myselfregister from './components/myselfregister.vue'
 import news from './components/news.vue'
 import personage from './components/personage.vue'
 import search from './components/search.vue'
+import product from './components/product.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -50,6 +51,10 @@ export default new Router({
     {
       path:'/home/search',
       component:search
+    },
+    {
+      path:'/home/product',
+      component:product
     }
   ]
 })
