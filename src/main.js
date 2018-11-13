@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import Axios from 'axios'
-import Mock from './mock'
+
 Vue.config.productionTip = false
 Vue.prototype.$axios = Axios;
 import "mint-ui/lib/style.css"
@@ -17,9 +17,8 @@ Vue.prototype.$toast = Toast;
 Vue.component(Button.name,Button)
 
 
-
 new Vue({
   router,
   store,
-  render: h => h(App)
+  render: h => h(App),
 }).$mount('#app')

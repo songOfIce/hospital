@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="product-header">
-      <router-link to="/home/index"><img src="../../public/img/personage/back.png" alt=""></router-link>
+      <router-link to="/home/homes"><img src="../../public/img/personage/back.png" alt=""></router-link>
       <h3>购物车(2)</h3>
     </div>
     <!-- product-top -->
@@ -68,5 +68,13 @@ div.product-top ul{
 div.product-top ul li div.product-right{
   width: 22px;
   height: 22px;
+}
+div.product-right{
+  display: flex;
+  justify-content: space-between;
+}
+div.product-right img{
+  height: 100px;
+  width: 100px;
 }
 </style>

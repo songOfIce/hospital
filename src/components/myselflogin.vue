@@ -113,12 +113,9 @@ div.action-gbn button{
   width: 100%;
   height:45px;
   line-height: 45px;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   margin-top:10px;
   outline: none;
-}
-div.inner input{
-  border-radius: 20px;
 }
 div.inner{
   position: relative;
@@ -191,14 +188,14 @@ div.inner-t i.inner-two{
 div.inner-o input{
   width: 100%;
   height: 32px;
-  border-radius:20px;
+  /* border-radius:20px; */
   padding-left: 30px;
 }
 div.inner-t input{
   margin-top:10px;
   width: 100%;
   height: 32px;
-  border-radius:20px;
+  /* border-radius:20px; */
   padding-left: 30px;
 }
 div.directory img{
@@ -207,7 +204,7 @@ div.directory img{
 }
 div.directory{
   position: absolute;
-  bottom:50px;
+  bottom:130px;
   margin-left: 13px;
 
 }

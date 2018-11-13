@@ -13,48 +13,85 @@ import product from './components/product.vue'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
+      path:'/',
+      component:index,
+       meta:{
+        keepAlive:false
+      }
+    },
+    {
       path:'/home/homes',
-      component: homes
+      component: homes,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path:'/home/index',
-      component:index
+      component:index,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path:'/home/health',
-      component:health
+      component:health,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path:'/home/myselflogin',
-      component:myselflogin
+      component:myselflogin,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path:'/home/myselfregister',
-      component:myselfregister
+      component:myselfregister,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path:'/home/discover',
-      component:discover
+      component:discover,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path:'/home/news',
-      component:news
+      component:news,
+      meta:{
+        keepAlive:false
+      }
     },
      {
       path:'/home/personage',
-      component:personage
+      component:personage,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path:'/home/search',
-      component:search
+      component:search,
+      meta:{
+        keepAlive:false
+      }
     },
     {
       path:'/home/product',
-      component:product
+      component:product,
+      meta:{
+        keepAlive:false
+      }
     }
   ]
 })

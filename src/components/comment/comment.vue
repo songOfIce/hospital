@@ -2,46 +2,40 @@
 <div>
 <div class="news-hot">
     <ul>
-      <li class="news-hotcomments" v-for="item of comment" :key="item.index">
-        <div class="news-hotcomments-comment">
-          <img :src="item.hotcommentsimg" alt="">
-          <p class="user-name">{{item.hotcommentsuser}}</p>
-        </div>
-        <div class="comment-area">
-          <img src="../../public/img/details/hot-comment.png" alt="">
-        </div>
-        <span class="city">不限 {{item.hotcity}}</span>
-        <p class="comment-words">{{item.hotcommentwords}}</p>
+      <li class="news-hotcomments" v-for="item of comment" :key="item.index">       
+            <comgive :item="item"></comgive>
       </li>
     </ul>
 </div>
   <div class="comment-footer">
     <div class="textarea-box">
-      <i class="up-no"></i>
+      <i class="up-i"><img src="../../../public/img/details/pencil.png" alt=""></i>
       <form action="">
         <router-link :to="!uname?'/home/myselflogin':''">
-        <textarea name="" id="" cols="50" rows="2" placeholder="评论一下" v-model="comments"></textarea>
-        <mt-button type="primary" size="large" @click="getcomments()">发表评论</mt-button>
+        <textarea name="" id="" cols="40" rows="1" placeholder="评论一下" v-model="comments"></textarea>
+        <button @click="getcomments()">发送</button>
         </router-link>
       </form>
-    </div>
-    <div class="comment-total">
-      <img src="" alt="">
     </div>
 </div>
 </div>
 </template>
 
 <script>
+import comgive from './give'
 export default {
+  components:{
+    comgive:comgive
+  },
   props:["pid"],
   data(){
     return{
       comment:[],
+      give:0,
       comments:[],
       uname:sessionStorage['username'],
       img:[],
-      result:[]
+      result:[],
     }
   },
   created() {
@@ -52,7 +46,7 @@ export default {
   },
   methods:{
     getcomments(){
-      this.$axios.post("http://localhost:5050/savecomment",`pid=${this.pid}&hotcommentsimg=${this.img}&hotcommentsuser=${this.uname}&hotcommentwords=${this.comments}`).then(res=>{
+      this.$axios.post("http://localhost:5050/savecomment",`pid=${this.pid}&hotcommentsimg=${this.img}&hotcommentsuser=${this.uname}&hotcommentwords=${this.comments}&give=${this.give}`).then(res=>{
         this.result = res.data;
         if(this.result.code==1){
           this.getcomment();
@@ -71,6 +65,7 @@ export default {
         }
       })
     },
+
     personage(){
       this.$axios.post("http://localhost:5050/personage",`username=${this.uname}`).then(res=>{
         this.res = res.data;
@@ -90,22 +85,26 @@ export default {
 div.news-hot{
   margin-bottom: 100px;
 }
-div.comment-area img{
-  height: 18px;
+div.comment-area{
+  background-image: url(../../../public/img/details/all-like.png);
+  background-position:bottom;
+  background-size: 18px 30px;
+  height: 15px;
   width: 18px;
 }
-div.comment-footer{
-  text-align: center;
-  }
+div.comment-area.active{
+  background-position:top;
+}
 div.comment-total{
   margin-bottom: 0px;
 }
-  div.comment-footer{
-    width: 100%;
-    position: fixed;
-    bottom: -20px;
-  }
-  div.news-hotcomments-comment{
+div.comment-footer{
+  width: 100%;
+  position: fixed;
+  bottom: -20px;
+  text-align: center;
+}
+div.news-hotcomments-comment{
   display: flex;
 }
 div.news-hotcomments-comment img{
@@ -126,7 +125,7 @@ ul{
 }
 div.comment-area{
   position: absolute;
-  right: 13px;
+  right: 25px;
   top:0px;
 }
 li.news-hotcomments span{
@@ -152,5 +151,42 @@ p.comment-words{
   left: 80px;
   color: #999999;
   font-size: 12px;
+}
+div.textarea-box{
+  position: relative;
+}
+div.textarea-box textarea{
+  border-radius: 20px;
+  margin-bottom: -5px;
+  border:1px solid #F9F9F9;
+  padding-left:26px;
+  outline: none;
+}
+div.comment-footer{
+  height: 50px;
+  border-top:1px solid #F2F2F2;
+  background: #FFFFFF;
+  line-height: 25px;
+}
+div.textarea-box button{
+  border-radius: 20px;
+  background: #83CDFF;
+  outline: none;
+  border:1px solid #83CDFF;
+}
+i.up-i img{
+  height: 15px;
+  width: 15px;
+}
+i.up-i{
+  position: absolute;
+  left:15px;
+}
+i.comment-user{
+  position: absolute;
+  right:-15px;
+  font-style: normal;
+  font-size: 14px;
+  color: #6EB1EC;
 }
 </style>

@@ -44,7 +44,7 @@
       <div>更多 ></div>
     </router-link>
   </div>
-  <div class="home-product-product">
+  <div class="home-product-product" @click="getproduct()">
     <div class="home-product-item" v-for="item of product" :key="item.index">
       <h3>{{item.title}}</h3>
       <div class="home-product-item-home">
@@ -117,6 +117,9 @@ export default {
     this.getdata();
   },
   methods: {
+    getproduct(){
+      this.$router.push({path:"/home/product"})
+    },
     getdata() {
       this.$axios.get("http://localhost:5050/homeSwipe").then(data => {
         this.homeSwipe = data.data;

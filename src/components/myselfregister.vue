@@ -128,7 +128,7 @@ div.register-section{
 }
 div.register-section-o input,div.register-section-t input{
   width: 100%;
-  border-radius: 20px;
+  /* border-radius: 20px; */
   height: 32px;
   margin-top:10px;
   padding-left: 30px;
@@ -173,7 +173,7 @@ div.register-footer-header a{
   color:  #3278EE;
 }
 div.register-footer-header{
-    margin: 20px;
+  margin: 20px;
 }
 div.register-footer{
   width: 90%;
@@ -193,7 +193,7 @@ div.directory img{
 }
 div.directory{
   position: absolute;
-  bottom:30px;
+  bottom:110px;
   margin-left: 13px;
 
 }

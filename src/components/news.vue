@@ -61,7 +61,7 @@
 </template>
 
 <script>
-import comment from './comment.vue';
+import comment from './comment/comment.vue';
 export default {
   components:{
     CommentBox:comment
