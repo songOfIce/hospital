@@ -8,13 +8,11 @@ Vue.config.productionTip = false
 Vue.prototype.$axios = Axios;
 import "mint-ui/lib/style.css"
 import { Swipe, SwipeItem} from 'mint-ui'
-import {Button} from 'mint-ui'
 // 引入toast组件
 import{Toast} from 'mint-ui'
 Vue.component(Swipe.name,Swipe)
 Vue.component(SwipeItem.name,SwipeItem)
 Vue.prototype.$toast = Toast;
-Vue.component(Button.name,Button)
 
 
 new Vue({
