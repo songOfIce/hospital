@@ -28,7 +28,7 @@
    <div class="product-footer">
      <ul>
        <li>
-        <router-link to="">
+        <router-link to="/home/shoppingcar">
            <img src="../../public/img/product/car.png" alt="">
         </router-link>
          <span class="product-car">0</span>
@@ -80,6 +80,7 @@ export default {
  div.product-intr ul li{
    font-size: 12px;
    display: flex;
+   border-bottom:1px solid #EEEEEE;
  }
  div.product-intr ul li label{
    line-height: 40px;
@@ -100,6 +101,7 @@ export default {
  }
  div.product-intr p.product-title{
    font-size: 14px;
+   border-bottom: 1px solid #EEEEEE;
  }
  div.product-footer{
    position:fixed;
@@ -116,7 +118,6 @@ export default {
  }
  div.product-footer ul{
    display: flex;
-   justify-content: space-around;
    padding: 0px;
    margin: 0px;
  }
@@ -129,7 +130,7 @@ export default {
    position: absolute;
    height: 16px;
    width: 16px;
-   left:60px;
+   left:40px;
    top:5px;
    line-height: 16px;
    text-align: center;
@@ -140,5 +141,16 @@ export default {
  }
  div.product-footer ul li{
    border:1px solid #EEEEEE;
+   width: 50%;
+   text-align: center;
+ }
+ div.product-footer ul li:first-child{
+   width: 20%;
+ }
+ div.product-footer ul li:last-child{
+   background: #FEB70F;
+ }
+ div.product-footer ul li:last-child a{
+    color: #FFFFFF;
  }
 </style>

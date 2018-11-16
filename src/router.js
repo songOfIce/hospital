@@ -10,6 +10,8 @@ import news from './components/news.vue'
 import personage from './components/personage.vue'
 import search from './components/search.vue'
 import product from './components/product.vue'
+import shoppingcar from './components/shopping/shoppingcar.vue'
+import shopping from './components/shopping/shopping.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -89,6 +91,20 @@ export default new Router({
     {
       path:'/home/product',
       component:product,
+      meta:{
+        keepAlive:false
+      }
+    },
+    {
+      path:'/home/shoppingcar',
+      component:shoppingcar,
+      meta:{
+        keepAlive:false
+      }
+    },
+     {
+      path:'/home/shopping',
+      component:shopping,
       meta:{
         keepAlive:false
       }
