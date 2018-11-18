@@ -34,12 +34,21 @@
       </div>
       </div>
     </div>
+    <shopping-box></shopping-box>
   </div>
 </template>
 
 <script>
+import shopping from "./shopping.vue"
 export default {
-
+  components:{
+    shoppingBox:shopping
+  },
+  data(){
+    return {
+      
+    }
+  }
 }
 </script>
 
@@ -61,6 +70,14 @@ div.shoppingcar-span span{
   top:35px;
   border:1px solid #DADDE2;
   border-radius: 50%;
+}
+div.shoppingcar-span span.active{
+  background-image: url(../../../public/img/product/check.png);
+  background-size: 22px 22px;
+  background-repeat:no-repeat;
+  background-position: top;
+  height: 22px;
+  width: 22px;
 }
 div.shoppingcar-img img{
   height: 100px;

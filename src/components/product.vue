@@ -31,13 +31,13 @@
         <router-link to="/home/shoppingcar">
            <img src="../../public/img/product/car.png" alt="">
         </router-link>
-         <span class="product-car">0</span>
+         <span class="product-car">{{detailnum}}</span>
        </li>
        <li>
-         <router-link to="">加入清单</router-link>
+         <div @click="getshopping()">加入清单</div>
        </li>
        <li>
-         <router-link to="">立即购买</router-link>
+         <div>立即购买</div>
        </li>
      </ul>
    </div>
@@ -45,7 +45,27 @@
 </template>
 <script>
 export default {
-
+  data(){
+    return {
+      detaillist:[],
+      detailnum:0,
+      pid:1
+    }
+  },
+  methods:{
+    getshopping(){
+     this.detailnum = this.detailnum+1
+    },
+    created(){
+      this.getdata();
+    },
+    getdata(){
+      this.$axios.get("http://localhost:5050/details?pid="+this.pid).then(res=>{
+        this.res = res.data;
+        console.log(this.res);
+      })
+    }
+  }
 }
 </script>
 
@@ -152,5 +172,8 @@ export default {
  }
  div.product-footer ul li:last-child a{
     color: #FFFFFF;
+ }
+ span.product-price-market{
+   text-decoration: line-through;
  }
 </style>

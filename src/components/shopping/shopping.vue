@@ -10,10 +10,10 @@
         合计:
         <span>0</span>
         元
-      <div class="cart-right">
-        <router-link to="">去结算</router-link>
-      </div>
       </li>
+      <li class="cart-right">
+        <router-link to="">去结算</router-link>
+      </li> 
       </ul>
     </footer>
   </div>
@@ -21,7 +21,14 @@
 
 <script>
 export default {
-
+  data(){
+    return {
+      index:""
+    }
+  },
+  methods:{
+    
+  }
 }
 </script>
 
@@ -36,7 +43,7 @@ footer.cart-footer-car{
   border-top:1px solid #F7F7F8;
   line-height: 50px;
 }
-div.cart-footer span.cart-spanone{
+li.cart-footer span.cart-spanone{
   position: absolute;
   height: 22px;
   width: 22px;
@@ -46,7 +53,43 @@ div.cart-footer span.cart-spanone{
   border-radius: 50%;
   text-align: center;
 }
-div.cart-footer-center ul{
+li.cart-footer span.cart-spanone.active{
+  background-image: url(../../../public/img/product/check.png);
+  background-size: 22px 22px;
+  background-repeat:no-repeat;
+  background-position: top;
+  height: 22px;
+  width: 22px;
+}
+li.cart-footer span.cart-spantwo{
+  position: absolute;
+  left: 40px;
+}
+li.cart-footer{
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+ul{
   list-style: none;
+  padding: 0px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+  width: 100%;
+}
+ul li{
+  width: 50%;
+  text-align: center;
+}
+footer.cart-footer-car ul li:last-child{
+  background: #FEB70F;
+}
+footer.cart-footer-car ul li:nth-child(2) span{
+  color: #FF695C;
+  font-size: 20px;
+}
+footer.cart-footer-car ul li:last-child a{
+  color: #FFFFFF;
 }
 </style>
